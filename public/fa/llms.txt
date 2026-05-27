@@ -1,7 +1,7 @@
 # مهدی سرفرازی
-- [پروژه‌ها](https://mahdisf.github.io/fa/projects/)
-- [تماس](https://mahdisf.github.io/fa/contact/)
-- [درباره](https://mahdisf.github.io/fa/about/)
+- [پروژه‌ها](http://localhost:1313/fa/projects/)
+- [تماس](http://localhost:1313/fa/contact/)
+- [درباره](http://localhost:1313/fa/about/)
 
 ## بلاگ
-- [شروع این بلاگ](https://mahdisf.github.io/fa/posts/starting-this-blog/)
+- [شروع این بلاگ](http://localhost:1313/fa/posts/starting-this-blog/)

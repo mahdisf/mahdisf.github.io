@@ -1,4 +1,4 @@
-baseURL: "https://mahdisf.github.io/"
+baseURL: "https://mahdisf.github.io"
 title: "Mahdi Sarfarazi"
 copyright: "{{ now.Format \"2006\" }} - Mahdi Sarfarazi"
 

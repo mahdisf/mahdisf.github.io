@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Mahdi Sarfarazi</title>
-    <link>https://mahdisf.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Mahdi Sarfarazi</description>
     <image>
       <title>Mahdi Sarfarazi</title>
-      <url>https://mahdisf.github.io/images/papermod-cover.png</url>
-      <link>https://mahdisf.github.io/images/papermod-cover.png</link>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>{{ now.Format &amp;ldquo;2006&amp;rdquo; }} - Mahdi Sarfarazi</copyright>
     <lastBuildDate>Wed, 27 May 2026 09:00:00 +0330</lastBuildDate>
-    <atom:link href="https://mahdisf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>https://mahdisf.github.io/tags/ai/</link>
+      <link>http://localhost:1313/tags/ai/</link>
       <pubDate>Wed, 27 May 2026 09:00:00 +0330</pubDate>
-      <guid>https://mahdisf.github.io/tags/ai/</guid>
+      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Reinforcement Learning</title>
-      <link>https://mahdisf.github.io/tags/reinforcement-learning/</link>
+      <link>http://localhost:1313/tags/reinforcement-learning/</link>
       <pubDate>Wed, 27 May 2026 09:00:00 +0330</pubDate>
-      <guid>https://mahdisf.github.io/tags/reinforcement-learning/</guid>
+      <guid>http://localhost:1313/tags/reinforcement-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Robotics</title>
-      <link>https://mahdisf.github.io/tags/robotics/</link>
+      <link>http://localhost:1313/tags/robotics/</link>
       <pubDate>Wed, 27 May 2026 09:00:00 +0330</pubDate>
-      <guid>https://mahdisf.github.io/tags/robotics/</guid>
+      <guid>http://localhost:1313/tags/robotics/</guid>
       <description></description>
     </item>
     <item>
       <title>ROS2</title>
-      <link>https://mahdisf.github.io/tags/ros2/</link>
+      <link>http://localhost:1313/tags/ros2/</link>
       <pubDate>Wed, 27 May 2026 09:00:00 +0330</pubDate>
-      <guid>https://mahdisf.github.io/tags/ros2/</guid>
+      <guid>http://localhost:1313/tags/ros2/</guid>
       <description></description>
     </item>
   </channel>
