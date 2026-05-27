@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ROS2 on مهدی سرفرازی</title>
-    <link>//localhost:1313/fa/tags/ros2/</link>
+    <link>https://mahdisf.github.io/fa/tags/ros2/</link>
     <description>Recent content in ROS2 on مهدی سرفرازی</description>
     <image>
       <title>مهدی سرفرازی</title>
-      <url>//localhost:1313/images/papermod-cover.png</url>
-      <link>//localhost:1313/images/papermod-cover.png</link>
+      <url>https://mahdisf.github.io/images/papermod-cover.png</url>
+      <link>https://mahdisf.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>fa-IR</language>
-    <copyright>2026 Mahdi Sarfarazi</copyright>
-    <atom:link href="//localhost:1313/fa/tags/ros2/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>{{ now.Format &amp;ldquo;2006&amp;rdquo; }} - Mahdi Sarfarazi</copyright>
+    <atom:link href="https://mahdisf.github.io/fa/tags/ros2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>شروع این بلاگ</title>
-      <link>//localhost:1313/fa/posts/starting-this-blog/</link>
+      <link>https://mahdisf.github.io/fa/posts/starting-this-blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/fa/posts/starting-this-blog/</guid>
+      <guid>https://mahdisf.github.io/fa/posts/starting-this-blog/</guid>
       <description>دلیل راه‌اندازی بلاگ فنی درباره رباتیک، هوش مصنوعی، شبیه‌سازی و کنترل.</description>
     </item>
   </channel>

@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Reinforcement Learning on Mahdi Sarfarazi</title>
-    <link>//localhost:1313/tags/reinforcement-learning/</link>
+    <link>https://mahdisf.github.io/tags/reinforcement-learning/</link>
     <description>Recent content in Reinforcement Learning on Mahdi Sarfarazi</description>
     <image>
       <title>Mahdi Sarfarazi</title>
-      <url>//localhost:1313/images/papermod-cover.png</url>
-      <link>//localhost:1313/images/papermod-cover.png</link>
+      <url>https://mahdisf.github.io/images/papermod-cover.png</url>
+      <link>https://mahdisf.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>2026 Mahdi Sarfarazi</copyright>
+    <copyright>{{ now.Format &amp;ldquo;2006&amp;rdquo; }} - Mahdi Sarfarazi</copyright>
     <lastBuildDate>Wed, 27 May 2026 09:00:00 +0330</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mahdisf.github.io/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Starting This Blog</title>
-      <link>//localhost:1313/posts/starting-this-blog/</link>
+      <link>https://mahdisf.github.io/posts/starting-this-blog/</link>
       <pubDate>Wed, 27 May 2026 09:00:00 +0330</pubDate>
-      <guid>//localhost:1313/posts/starting-this-blog/</guid>
+      <guid>https://mahdisf.github.io/posts/starting-this-blog/</guid>
       <description>Why I am keeping a technical blog about robotics, AI, simulation, and control.</description>
     </item>
   </channel>

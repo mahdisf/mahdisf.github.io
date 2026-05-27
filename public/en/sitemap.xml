@@ -2,166 +2,166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/tags/ai/</loc>
+    <loc>https://mahdisf.github.io/tags/ai/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa-IR"
-                href="//localhost:1313/fa/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/posts/"
-                />
-  </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>https://mahdisf.github.io/posts/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/categories/"
+                href="https://mahdisf.github.io/fa/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/categories/"
+                href="https://mahdisf.github.io/posts/"
                 />
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>https://mahdisf.github.io/categories/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/"
+                href="https://mahdisf.github.io/fa/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/"
+                href="https://mahdisf.github.io/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/categories/notes/</loc>
-    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/reinforcement-learning/</loc>
-    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/robotics/</loc>
-    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/ros2/</loc>
+    <loc>https://mahdisf.github.io/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/tags/ros2/"
+                href="https://mahdisf.github.io/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/tags/ros2/"
+                href="https://mahdisf.github.io/"
                 />
   </url><url>
-    <loc>//localhost:1313/posts/starting-this-blog/</loc>
+    <loc>https://mahdisf.github.io/categories/notes/</loc>
+    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
+  </url><url>
+    <loc>https://mahdisf.github.io/tags/reinforcement-learning/</loc>
+    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
+  </url><url>
+    <loc>https://mahdisf.github.io/tags/robotics/</loc>
+    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
+  </url><url>
+    <loc>https://mahdisf.github.io/tags/ros2/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/posts/starting-this-blog/"
+                href="https://mahdisf.github.io/fa/tags/ros2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/posts/starting-this-blog/"
+                href="https://mahdisf.github.io/tags/ros2/"
                 />
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>https://mahdisf.github.io/posts/starting-this-blog/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/tags/"
+                href="https://mahdisf.github.io/fa/posts/starting-this-blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/tags/"
+                href="https://mahdisf.github.io/posts/starting-this-blog/"
                 />
   </url><url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>https://mahdisf.github.io/tags/</loc>
+    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/about/"
+                href="https://mahdisf.github.io/fa/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/about/"
+                href="https://mahdisf.github.io/tags/"
                 />
   </url><url>
-    <loc>//localhost:1313/archives/</loc>
+    <loc>https://mahdisf.github.io/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/archives/"
+                href="https://mahdisf.github.io/fa/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/archives/"
+                href="https://mahdisf.github.io/about/"
                 />
   </url><url>
-    <loc>//localhost:1313/contact/</loc>
+    <loc>https://mahdisf.github.io/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/contact/"
+                href="https://mahdisf.github.io/fa/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/contact/"
+                href="https://mahdisf.github.io/archives/"
                 />
   </url><url>
-    <loc>//localhost:1313/projects/</loc>
+    <loc>https://mahdisf.github.io/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/projects/"
+                href="https://mahdisf.github.io/fa/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/projects/"
+                href="https://mahdisf.github.io/contact/"
                 />
   </url><url>
-    <loc>//localhost:1313/search/</loc>
+    <loc>https://mahdisf.github.io/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/search/"
+                href="https://mahdisf.github.io/fa/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/search/"
+                href="https://mahdisf.github.io/projects/"
                 />
   </url><url>
-    <loc>//localhost:1313/series/</loc>
+    <loc>https://mahdisf.github.io/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:1313/fa/series/"
+                href="https://mahdisf.github.io/fa/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/series/"
+                href="https://mahdisf.github.io/search/"
+                />
+  </url><url>
+    <loc>https://mahdisf.github.io/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa-IR"
+                href="https://mahdisf.github.io/fa/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mahdisf.github.io/series/"
                 />
   </url>
 </urlset>

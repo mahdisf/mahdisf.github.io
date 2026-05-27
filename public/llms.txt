@@ -1,7 +1,7 @@
 # Mahdi Sarfarazi
-- [About](//localhost:1313/about/)
-- [Contact](//localhost:1313/contact/)
-- [Projects](//localhost:1313/projects/)
+- [About](https://mahdisf.github.io/about/)
+- [Contact](https://mahdisf.github.io/contact/)
+- [Projects](https://mahdisf.github.io/projects/)
 
 ## Blog
-- [Starting This Blog](//localhost:1313/posts/starting-this-blog/)
+- [Starting This Blog](https://mahdisf.github.io/posts/starting-this-blog/)
