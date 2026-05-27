@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Home on Mahdi Sarfarazi</title>
-    <link>//localhost:7263/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content in Home on Mahdi Sarfarazi</description>
     <image>
       <title>Mahdi Sarfarazi</title>
-      <url>//localhost:7263/images/papermod-cover.png</url>
-      <link>//localhost:7263/images/papermod-cover.png</link>
+      <url>//localhost:1313/images/papermod-cover.png</url>
+      <link>//localhost:1313/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>2026 Mahdi Sarfarazi</copyright>
     <lastBuildDate>Wed, 27 May 2026 09:00:00 +0330</lastBuildDate>
-    <atom:link href="//localhost:7263/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Starting This Blog</title>
-      <link>//localhost:7263/posts/starting-this-blog/</link>
+      <link>//localhost:1313/posts/starting-this-blog/</link>
       <pubDate>Wed, 27 May 2026 09:00:00 +0330</pubDate>
-      <guid>//localhost:7263/posts/starting-this-blog/</guid>
+      <guid>//localhost:1313/posts/starting-this-blog/</guid>
       <description>Why I am keeping a technical blog about robotics, AI, simulation, and control.</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>//localhost:7263/contact/</link>
+      <link>//localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:7263/contact/</guid>
+      <guid>//localhost:1313/contact/</guid>
       <description>Contact information for Mahdi Sarfarazi.</description>
     </item>
     <item>
       <title>Projects</title>
-      <link>//localhost:7263/projects/</link>
+      <link>//localhost:1313/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:7263/projects/</guid>
+      <guid>//localhost:1313/projects/</guid>
       <description>Selected AI and robotics projects by Mahdi Sarfarazi.</description>
     </item>
   </channel>

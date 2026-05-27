@@ -2,166 +2,166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:7263/tags/ai/</loc>
+    <loc>//localhost:1313/tags/ai/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
   </url><url>
-    <loc>//localhost:7263/posts/</loc>
-    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa-IR"
-                href="//localhost:7263/fa/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:7263/posts/"
-                />
-  </url><url>
-    <loc>//localhost:7263/categories/</loc>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/categories/"
+                href="//localhost:1313/fa/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/categories/"
+                href="//localhost:1313/posts/"
                 />
   </url><url>
-    <loc>//localhost:7263/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/"
+                href="//localhost:1313/fa/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/"
+                href="//localhost:1313/categories/"
                 />
   </url><url>
-    <loc>//localhost:7263/categories/notes/</loc>
-    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
-  </url><url>
-    <loc>//localhost:7263/tags/reinforcement-learning/</loc>
-    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
-  </url><url>
-    <loc>//localhost:7263/tags/robotics/</loc>
-    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
-  </url><url>
-    <loc>//localhost:7263/tags/ros2/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/tags/ros2/"
+                href="//localhost:1313/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/tags/ros2/"
+                href="//localhost:1313/"
                 />
   </url><url>
-    <loc>//localhost:7263/posts/starting-this-blog/</loc>
+    <loc>//localhost:1313/categories/notes/</loc>
+    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/reinforcement-learning/</loc>
+    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/robotics/</loc>
+    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/ros2/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/posts/starting-this-blog/"
+                href="//localhost:1313/fa/tags/ros2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/posts/starting-this-blog/"
+                href="//localhost:1313/tags/ros2/"
                 />
   </url><url>
-    <loc>//localhost:7263/tags/</loc>
+    <loc>//localhost:1313/posts/starting-this-blog/</loc>
     <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/tags/"
+                href="//localhost:1313/fa/posts/starting-this-blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/tags/"
+                href="//localhost:1313/posts/starting-this-blog/"
                 />
   </url><url>
-    <loc>//localhost:7263/about/</loc>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2026-05-27T09:00:00+03:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/about/"
+                href="//localhost:1313/fa/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/about/"
+                href="//localhost:1313/tags/"
                 />
   </url><url>
-    <loc>//localhost:7263/archives/</loc>
+    <loc>//localhost:1313/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/archives/"
+                href="//localhost:1313/fa/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/archives/"
+                href="//localhost:1313/about/"
                 />
   </url><url>
-    <loc>//localhost:7263/contact/</loc>
+    <loc>//localhost:1313/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/contact/"
+                href="//localhost:1313/fa/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/contact/"
+                href="//localhost:1313/archives/"
                 />
   </url><url>
-    <loc>//localhost:7263/projects/</loc>
+    <loc>//localhost:1313/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/projects/"
+                href="//localhost:1313/fa/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/projects/"
+                href="//localhost:1313/contact/"
                 />
   </url><url>
-    <loc>//localhost:7263/search/</loc>
+    <loc>//localhost:1313/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/search/"
+                href="//localhost:1313/fa/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/search/"
+                href="//localhost:1313/projects/"
                 />
   </url><url>
-    <loc>//localhost:7263/series/</loc>
+    <loc>//localhost:1313/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="//localhost:7263/fa/series/"
+                href="//localhost:1313/fa/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7263/series/"
+                href="//localhost:1313/search/"
+                />
+  </url><url>
+    <loc>//localhost:1313/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa-IR"
+                href="//localhost:1313/fa/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/series/"
                 />
   </url>
 </urlset>
