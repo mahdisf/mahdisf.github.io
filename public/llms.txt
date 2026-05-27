@@ -1,0 +1,19 @@
+# Mahdi Sarfarazi
+- [About](//localhost:1313/about/)
+
+## Posts
+- [Markdown Syntax Guide](//localhost:1313/posts/markdown-syntax/)
+- [Code Syntax Guide](//localhost:1313/posts/code_syntax/)
+- [Audio and Video](//localhost:1313/posts/audio-video/)
+- [Markdown Syntax Guide For L2](//localhost:1313/posts/markdown-syntax.fr/)
+- [Rich Content and Shortcodes](//localhost:1313/posts/rich-content/)
+- [Math Typesetting](//localhost:1313/posts/math-typesetting/)
+- [Emoji Support](//localhost:1313/posts/emoji-support/)
+
+### Inner Section
+- [Markdown Headings](//localhost:1313/posts/inner-section/md-headings/)
+- [Markdown Lists](//localhost:1313/posts/inner-section/md-lists/)
+- [Sample Markdown Blog Post](//localhost:1313/posts/inner-section/md-blog/)
+
+### PaperMod
+- [PaperMod Installation Guide](//localhost:1313/posts/papermod/papermod-installation/)
