@@ -1,119 +1,61 @@
 ---
 title: "About"
-date: 2026-05-09T12:00:00+05:30
-description: "A fast, clean, and responsive Hugo theme designed for bloggers and content creators."
-author: ["Aditya Telange"]
+description: "About Mahdi Sarfarazi, an AI and robotics engineer working on ROS2, reinforcement learning, and robotic autonomy."
+author: ["Mahdi Sarfarazi"]
 draft: false
 hiddenInRss: true
 disableShare: true
 ShowBreadcrumbs: false
 ---
 
-PaperMod is a fast, clean, and responsive Hugo theme designed for bloggers and content creators. It offers a modern design with a focus on readability and performance, making it an excellent choice for personal blogs, portfolios, and documentation sites.
+I am an AI and robotics engineer focused on connecting modern AI systems with physical robots. My work spans ROS2 software, reinforcement learning for control, simulation pipelines, multimodal perception, and hands-on hardware integration.
 
-> Based on [hugo-paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3), with additional features and customization options.
+I am currently pursuing a Master's degree in Mechatronics Engineering at Iran University of Science and Technology, where my research focuses on risk-aware path planning and control for quadruped robots under environmental interaction uncertainty. The work combines deep reinforcement learning, Isaac Gym, and cloud-based training.
 
-<table>
-	<tbody>
-		<tr>
-			<td>PaperMod at Hugo Themes</td>
-			<td><a href="https://themes.gohugo.io/themes/hugo-papermod/">PaperMod@themes.gohugo.io</a></td>
-		</tr>
-		<tr>
-			<td>Minimum Hugo Version</td>
-			<td><a href="https://github.com/gohugoio/hugo/releases/tag/v0.146.0">Hugo v0.146.0+</a></td>
-		</tr>
-		<tr>
-			<td>Discord Community</td>
-			<td><a href="https://discord.gg/ahpmTvhVmp">Join Discord to chat with the community</a></td>
-		</tr>
-        <tr>
-			<td>Github Discussion</td>
-			<td><a href="https://github.com/adityatelange/hugo-PaperMod/discussions">Join Discussions on Github</a></td>
-		</tr>
-		<tr>
-			<td>Live Demo</td>
-			<td><a href="https://adityatelange.github.io/hugo-PaperMod/">adityatelange.github.io/hugo-PaperMod</a></td>
-		</tr>
-		<tr>
-			<td>Documentation</td>
-			<td><a href="https://github.com/adityatelange/hugo-PaperMod/wiki">Github Wiki</a></td>
-		</tr>
-		<tr>
-			<td>Example Site Source</td>
-			<td><a href="https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite">exampleSite branch</a></td>
-		</tr>
-		<tr>
-			<td><a href="https://www.star-history.com/adityatelange/hugo-papermod"><img src="https://api.star-history.com/badge?repo=adityatelange/hugo-PaperMod&amp;theme=dark" alt="Star History Rank" /></a></td>
-			<td><a href="https://ko-fi.com/H2H229ZWH"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi" /></a></td>
-		</tr>
-	</tbody>
-</table>
+## What I Work On
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/21258296/114303440-bfc0ae80-9aeb-11eb-8cfa-48a4bb385a6d.png" alt="Mockup image" title="Mockup"/>
-</p>
+- Robot learning, deep reinforcement learning, and control policy development.
+- ROS2 robotic software in Python and C++.
+- Simulation-to-hardware workflows using Isaac Gym, Isaac Sim, and Gazebo.
+- LLM and VLM integration for robotic task planning and autonomy.
+- Multimodal data pipelines using vision, proprioception, and state feedback.
 
----
+## Experience
 
-## Features 💥
+**Researcher and Robotic Software Engineer**  
+IUST AI and Dynamic Systems Research Lab, Sep 2024 - Present
 
-`☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive`
+- Develop deep reinforcement learning control policies for quadruped robot locomotion.
+- Build simulation-based data collection pipelines for proprioceptive and state data.
+- Study risk-aware planning and robust control for uncertain robot-environment interaction.
 
-- **Asset pipeline** -- Hugo's built-in asset generator with fingerprinting, bundling, and minification.
-- **Three layout modes** -- [Regular](https://github.com/adityatelange/hugo-PaperMod/wiki/Features#regular-mode-default-mode), [Home-Info](https://github.com/adityatelange/hugo-PaperMod/wiki/Features#home-info-mode), and [Profile](https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode).
-- **Light and dark themes** -- Automatic switching based on browser preference, plus a manual toggle.
-- **Multilingual support** -- Includes a built-in language selector.
-- **Search** -- Client-side search powered by Fuse.js.
-- **SEO optimized** -- Open Graph, Twitter Cards, and Schema.org structured data out of the box.
-- **Cover images** -- Per-post cover images with responsive image support.
-- **Table of contents** -- Auto-generated from heading structure.
-- **Multiple authors** -- Native support for multi-author sites.
-- **Social icons and share buttons** -- Configurable social links and per-post sharing.
-- **Breadcrumb navigation**
-- **Post archives and taxonomies**
-- **Code block copy buttons** -- One-click copying with Chroma syntax highlighting.
-- **Related post suggestions**
-- **Zero JS build dependencies** -- No webpack, Node.js, or other tooling required.
+**Robotic Software Engineer**  
+FUM Center of Advanced Rehabilitation and Robotics Research, Feb 2022 - Jan 2024
 
-| Topic                                                                                             | Description                                     |
-| ------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| **[Installation guide](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation)**        | Detailed installation and update instructions   |
-| **[Features wiki page](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)**            | In-depth explanations of all features           |
-| **[FAQ wiki](https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs)**                          | Common questions and configuration walkthroughs |
-| **[Icons wiki](https://github.com/adityatelange/hugo-PaperMod/wiki/Icons)**                       | Documentation for social icons and share icons  |
-| **[Variables wiki](https://github.com/adityatelange/hugo-PaperMod/wiki/Variables)**               | List of all available template variables        |
-| **[Overiding templates](https://github.com/adityatelange/hugo-PaperMod/wiki/Template_Overrides)** | Guide to customizing templates without forking  |
-| **[Releases](https://github.com/adityatelange/hugo-PaperMod/releases)**                           | Detailed history of releases                    |
+- Engineered modular ROS2 stacks in C++ and Python for exoskeleton and rehabilitation robots.
+- Implemented AI-based controllers using multi-sensor feedback.
+- Integrated, calibrated, and tuned motors, sensors, and embedded control hardware.
 
----
+## Education
 
-## Performance ☄️
+**M.Sc. Mechatronics Engineering**  
+Iran University of Science and Technology, 2024 - 2026
 
-PaperMod consistently scores near-perfect results on [Pagespeed Insights](https://pagespeed.web.dev/report?url=https://adityatelange.github.io/hugo-PaperMod/).
+Thesis: Risk-aware path planning and control for a quadruped robot considering interaction uncertainty with the environment using deep reinforcement learning, Isaac Gym, and cloud-based training.
 
-<img width="481" height="116" alt="image" src="https://github.com/user-attachments/assets/497d831b-d143-4a46-bc11-b1d7f8ef4a83" />
+**B.Sc. Mechanical Engineering**  
+Ferdowsi University of Mashhad, 2018 - 2024
 
----
+Project: Design, simulation, and implementation of a real-time fuzzy control system for a knee exoskeleton robot using MATLAB, C++, Python, ROS2, and Raspberry Pi.
 
-## Support 🫶
+Awarded Best Technologist Student of 2023 by the Department of Mechanical Engineering.
 
-- Star this repository to show your support.
-- Share PaperMod with others who might find it useful.
-- Sponsor the project on [GitHub Sponsors](https://github.com/sponsors/adityatelange) or [Ko-Fi](https://ko-fi.com/adityatelange).
+## Skills
 
----
+**AI and ML:** Deep reinforcement learning, multimodal learning, control theory, LLM/VLM integration, OpenCV.
 
-## Special Thanks 🌟
+**Robotics:** ROS/ROS2, Isaac Sim/Gym, Gazebo, motion planning, dynamic modeling.
 
-- [Highlight.js](https://github.com/highlightjs/highlight.js)
-- [Fuse.js](https://github.com/krisk/fuse)
-- [Feather Icons](https://github.com/feathericons/feather)
-- [Simple Icons](https://github.com/simple-icons/simple-icons)
-- All contributors and supporters
+**Languages and tools:** Python, C++, MATLAB, Git, Docker, Linux, Bash.
 
----
-
-## Stargazers 📈
-
-[![Stargazers over time](https://starchart.cc/adityatelange/hugo-PaperMod.svg?background=%23ffffff00&axis=%23858585&line=%236b63ff)](https://starchart.cc/adityatelange/hugo-PaperMod)
+**Hardware:** Raspberry Pi, Arduino, motor controllers, IMUs, encoders, sensor integration.

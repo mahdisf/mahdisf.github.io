@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>یادداشت‌ها on مهدی سرفرازی</title>
+    <link>//localhost:7263/fa/categories/%DB%8C%D8%A7%D8%AF%D8%AF%D8%A7%D8%B4%D8%AA%D9%87%D8%A7/</link>
+    <description>Recent content in یادداشت‌ها on مهدی سرفرازی</description>
+    <image>
+      <title>مهدی سرفرازی</title>
+      <url>//localhost:7263/images/papermod-cover.png</url>
+      <link>//localhost:7263/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>fa-IR</language>
+    <copyright>2026 Mahdi Sarfarazi</copyright>
+    <atom:link href="//localhost:7263/fa/categories/%DB%8C%D8%A7%D8%AF%D8%AF%D8%A7%D8%B4%D8%AA%D9%87%D8%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>شروع این بلاگ</title>
+      <link>//localhost:7263/fa/posts/starting-this-blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:7263/fa/posts/starting-this-blog/</guid>
+      <description>دلیل راه‌اندازی بلاگ فنی درباره رباتیک، هوش مصنوعی، شبیه‌سازی و کنترل.</description>
+    </item>
+  </channel>
+</rss>

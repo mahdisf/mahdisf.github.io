@@ -2,31 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Series on Mahdi Sarfarazi</title>
-    <link>//localhost:1313/series/</link>
+    <link>//localhost:7263/series/</link>
     <description>Recent content in Series on Mahdi Sarfarazi</description>
     <image>
       <title>Mahdi Sarfarazi</title>
-      <url>//localhost:1313/images/papermod-cover.png</url>
-      <link>//localhost:1313/images/papermod-cover.png</link>
+      <url>//localhost:7263/images/papermod-cover.png</url>
+      <link>//localhost:7263/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>PaperMod Contributors</copyright>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PaperMod</title>
-      <link>//localhost:1313/series/papermod/</link>
-      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/series/papermod/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Themes Guide</title>
-      <link>//localhost:1313/series/themes-guide/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/series/themes-guide/</guid>
-      <description></description>
-    </item>
+    <copyright>2026 Mahdi Sarfarazi</copyright>
+    <atom:link href="//localhost:7263/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
