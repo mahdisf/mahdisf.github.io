@@ -1,6 +1,7 @@
-baseURL: ""
+baseURL: "https://mahdisf.github.io/"
 title: "Mahdi Sarfarazi"
-copyright: "© 2026 Mahdi Sarfarazi"
+copyright: "{{ now.Format \"2006\" }} - Mahdi Sarfarazi"
+
 theme: ["PaperMod"]
 
 defaultContentLanguage: en
