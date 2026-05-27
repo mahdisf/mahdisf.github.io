@@ -1,0 +1,161 @@
+baseURL: ""
+title: "Mahdi Sarfarazi"
+copyright: "© 2026 Mahdi Sarfarazi"
+theme: ["PaperMod"]
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+languages:
+  en:
+    label: "English"
+    weight: 1
+    menu:
+      main:
+        - name: About
+          url: about/
+          weight: 1
+        - name: Projects
+          url: projects/
+          weight: 2
+        - name: Blog
+          url: posts/
+          weight: 3
+        - name: Archive
+          url: archives/
+          weight: 4
+        - name: Search
+          url: search/
+          weight: 5
+        - name: Contact
+          url: contact/
+          weight: 6
+  fa:
+    label: "فارسی"
+    locale: "fa-IR"
+    direction: rtl
+    title: "مهدی سرفرازی"
+    weight: 2
+    menu:
+      main:
+        - name: درباره
+          url: about/
+          weight: 1
+        - name: پروژه‌ها
+          url: projects/
+          weight: 2
+        - name: بلاگ
+          url: posts/
+          weight: 3
+        - name: آرشیو
+          url: archives/
+          weight: 4
+        - name: جستجو
+          url: search/
+          weight: 5
+        - name: تماس
+          url: contact/
+          weight: 6
+    params:
+      languageAltTitle: "فارسی"
+      homeInfoParams:
+        Title: "سلام، من مهدی هستم"
+        Content: |
+          مهندس هوش مصنوعی و رباتیک متخصص در اتصال سیستم‌های یادگیری مبتنی بر هوش مصنوعی با ربات‌های فیزیکی.
+
+          من با ROS2، Python، C++، Isaac Gym، Gazebo، یادگیری تقویتی، کنترل ربات‌ها و خودمختاری مبتنی بر LLM/VLM کار می‌کنم. این سایت مکانی است برای انتشار یادداشت‌های فنی درباره نرم‌افزار رباتیک، شبیه‌سازی، کنترل و سیستم‌های هوش مصنوعی عملی.
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts"]
+
+minify:
+  disableXML: true
+
+pagination:
+  disableAliases: false
+  pagerSize: 6
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+outputFormats:
+  llms:
+    mediaType: "text/plain"
+    baseName: "llms"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+    - llms
+
+params:
+  env: production
+  title: "Mahdi Sarfarazi"
+  displayFullLangName: true
+  description: "Personal website and technical blog of Mahdi Sarfarazi, AI and robotics engineer working on ROS2, reinforcement learning, robot control, and robotic autonomy."
+  keywords: ["robotics", "AI", "ROS2", "reinforcement learning", "robot control", "Isaac Gym", "Gazebo"]
+  author: "Mahdi Sarfarazi"
+  DateFormat: "January 2, 2006"
+
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  ShowWordCount: true
+  hideFooter: false
+
+  images: ["images/papermod-cover.png"]
+
+  label:
+    text: "Mahdi Sarfarazi"
+
+  homeInfoParams:
+    Title: "Hi, I'm Mahdi"
+    Content: |
+      AI and robotics engineer focused on connecting learning-based intelligence with physical systems.
+
+      I work with ROS2, Python, C++, Isaac Gym, Gazebo, reinforcement learning, robot control, and LLM/VLM-powered autonomy. This site is where I publish notes on robotics software, simulation, control, and practical AI systems.
+
+  socialIcons:
+    - name: github
+      title: GitHub
+      url: "https://github.com/mahdisf"
+    - name: linkedin
+      title: LinkedIn
+      url: "https://linkedin.com/in/sarfarazi"
+    - name: email
+      title: Email
+      url: "mailto:Mahdi_Sarfarazi@outlook.com"
+
+  assets:
+    disableHLJS: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+services:
+  instagram:
+    disableInlineCSS: true
+  x:
+    disableInlineCSS: true

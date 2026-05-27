@@ -1,0 +1,7 @@
+# Mahdi Sarfarazi
+- [About](//localhost:7263/about/)
+- [Contact](//localhost:7263/contact/)
+- [Projects](//localhost:7263/projects/)
+
+## Blog
+- [Starting This Blog](//localhost:7263/posts/starting-this-blog/)
