@@ -29,7 +29,9 @@
 
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 
-{{- if site.Params.ShowAllPagesInArchive }}
+{{- if or (eq .Section "logs") (eq .Type "logs") }}
+{{- $pages = where site.RegularPages "Section" "in" (slice "posts" "logs" "projects") }}
+{{- else if site.Params.ShowAllPagesInArchive }}
 {{- $pages = site.RegularPages }}
 {{- end }}
 

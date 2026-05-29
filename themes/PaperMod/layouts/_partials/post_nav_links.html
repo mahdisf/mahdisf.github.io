@@ -1,4 +1,9 @@
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if eq .Section "projects" }}
+{{- $pages = where site.RegularPages "Type" "in" (slice "projects") }}
+{{- else if eq .Section "logs" }}
+{{- $pages = where site.RegularPages "Type" "in" (slice "logs") }}
+{{- end }}
 {{- if and (gt (len $pages) 1) (in $pages . ) }}
 <nav class="paginav">
   {{- with $pages.Next . }}

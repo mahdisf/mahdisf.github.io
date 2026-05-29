@@ -1,5 +1,4 @@
 # مهدی سرفرازی
-- [پروژه‌ها](http://localhost:1313/fa/projects/)
 - [تماس](http://localhost:1313/fa/contact/)
 - [درباره](http://localhost:1313/fa/about/)
 

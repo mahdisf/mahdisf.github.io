@@ -50,18 +50,6 @@
                 href="http://localhost:1313/fa/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fa/archives/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/archives/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa-IR"
-                href="http://localhost:1313/fa/archives/"
-                />
-  </url><url>
     <loc>http://localhost:1313/fa/posts/</loc>
     <xhtml:link
                 rel="alternate"
@@ -72,18 +60,6 @@
                 rel="alternate"
                 hreflang="fa-IR"
                 href="http://localhost:1313/fa/posts/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/fa/projects/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa-IR"
-                href="http://localhost:1313/fa/projects/"
                 />
   </url><url>
     <loc>http://localhost:1313/fa/contact/</loc>

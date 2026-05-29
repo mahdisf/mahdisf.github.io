@@ -1,7 +1,13 @@
 # Mahdi Sarfarazi
 - [About](http://localhost:1313/about/)
 - [Contact](http://localhost:1313/contact/)
-- [Projects](http://localhost:1313/projects/)
 
 ## Blog
 - [Starting This Blog](http://localhost:1313/posts/starting-this-blog/)
+
+## Logs
+- [ROS2 Simulation and System Log](http://localhost:1313/logs/robotics-simulation-log/)
+
+## Projects
+- [LLM-Powered Robotic Task Planning](http://localhost:1313/projects/llm-powered-robotic-task-planning/)
+- [Human Follower Mobile Robot](http://localhost:1313/projects/human-follower-mobile-robot/)

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#2d3748"/>
+  <rect x="60" y="60" width="1080" height="510" rx="40" fill="#4a5568"/>
+  <text x="50%" y="46%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="64" fill="#e2e8f0">Project preview</text>
+  <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="32" fill="#cbd5e1">placeholder image</text>
+</svg>

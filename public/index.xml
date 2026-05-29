@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>{{ now.Format &amp;ldquo;2006&amp;rdquo; }} - Mahdi Sarfarazi</copyright>
+    <copyright>©2026 - Mahdi Sarfarazi</copyright>
     <lastBuildDate>Wed, 27 May 2026 09:00:00 +0330</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -22,18 +22,32 @@
       <description>Why I am keeping a technical blog about robotics, AI, simulation, and control.</description>
     </item>
     <item>
+      <title>ROS2 Simulation and System Log</title>
+      <link>http://localhost:1313/logs/robotics-simulation-log/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/logs/robotics-simulation-log/</guid>
+      <description>A short log entry covering ROS2 simulation updates and system observations.</description>
+    </item>
+    <item>
+      <title>LLM-Powered Robotic Task Planning</title>
+      <link>http://localhost:1313/projects/llm-powered-robotic-task-planning/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/llm-powered-robotic-task-planning/</guid>
+      <description>Robotic task planning using language models and ROS2 execution.</description>
+    </item>
+    <item>
+      <title>Human Follower Mobile Robot</title>
+      <link>http://localhost:1313/projects/human-follower-mobile-robot/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/human-follower-mobile-robot/</guid>
+      <description>Vision-based human follower robot built with ROS2 and embedded control.</description>
+    </item>
+    <item>
       <title>Contact</title>
       <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/contact/</guid>
       <description>Contact information for Mahdi Sarfarazi.</description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
-      <description>Selected AI and robotics projects by Mahdi Sarfarazi.</description>
     </item>
   </channel>
 </rss>

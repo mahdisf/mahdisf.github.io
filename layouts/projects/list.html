@@ -1,0 +1,30 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description }}</div>
+  {{- end }}
+</header>
+
+<div class="projects-list">
+  {{- range .Pages.ByPublishDate }}
+  <article class="project-entry">
+    <a class="project-row" href="{{ .Permalink }}" aria-label="Project {{ .Title }}">
+      <div class="project-thumb">
+        {{- $img := or .Params.cover.image .Params.image .Params.featured }}
+        {{- if $img }}
+          <img src="{{ $img | absURL }}" alt="{{ .Title | plainify }}" loading="lazy">
+        {{- end }}
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">{{ .Title }}</h3>
+        {{- with .Summary }}<p class="project-summary">{{ . | plainify }}</p>{{- end }}
+        <div class="project-meta">{{ partial "post_meta.html" . }}</div>
+      </div>
+    </a>
+  </article>
+  {{- end }}
+</div>
+
+{{- end }}

@@ -1,6 +1,6 @@
 baseURL: "https://mahdisf.github.io"
 title: "Mahdi Sarfarazi"
-copyright: "{{ now.Format \"2006\" }} - Mahdi Sarfarazi"
+copyright: "©2026 - Mahdi Sarfarazi"
 
 theme: ["PaperMod"]
 
@@ -22,7 +22,7 @@ languages:
           url: posts/
           weight: 2
         - name: Logs
-          url: Logs/
+          url: logs/
           weight: 3
         - name: Search
           url: search/
@@ -48,7 +48,7 @@ languages:
           url: posts/
           weight: 3
         - name: لاگ
-          url: Log/
+          url: logs/
           weight: 4
         - name: جستجو
           url: search/
@@ -110,6 +110,8 @@ params:
   keywords: ["robotics", "AI", "ROS2", "reinforcement learning", "robot control", "Isaac Gym", "Gazebo"]
   author: "Mahdi Sarfarazi"
   DateFormat: "January 2, 2006"
+
+  mainSections: ["logs"]
 
   defaultTheme: auto
   ShowShareButtons: true

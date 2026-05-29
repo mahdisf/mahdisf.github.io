@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>{{ now.Format &amp;ldquo;2006&amp;rdquo; }} - Mahdi Sarfarazi</copyright>
+    <copyright>©2026 - Mahdi Sarfarazi</copyright>
     <atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

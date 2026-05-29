@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>{{ now.Format &amp;ldquo;2006&amp;rdquo; }} - Mahdi Sarfarazi</copyright>
+    <copyright>©2026 - Mahdi Sarfarazi</copyright>
     <lastBuildDate>Wed, 27 May 2026 09:00:00 +0330</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/robotics/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -20,6 +20,13 @@
       <pubDate>Wed, 27 May 2026 09:00:00 +0330</pubDate>
       <guid>http://localhost:1313/posts/starting-this-blog/</guid>
       <description>Why I am keeping a technical blog about robotics, AI, simulation, and control.</description>
+    </item>
+    <item>
+      <title>Human Follower Mobile Robot</title>
+      <link>http://localhost:1313/projects/human-follower-mobile-robot/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/human-follower-mobile-robot/</guid>
+      <description>Vision-based human follower robot built with ROS2 and embedded control.</description>
     </item>
   </channel>
 </rss>
