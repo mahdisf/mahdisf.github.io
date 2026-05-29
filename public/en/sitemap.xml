@@ -104,16 +104,16 @@
                 href="http://localhost:1313/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>http://localhost:1313/logs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa-IR"
-                href="http://localhost:1313/fa/archives/"
+                href="http://localhost:1313/fa/logs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/archives/"
+                href="http://localhost:1313/logs/"
                 />
   </url><url>
     <loc>http://localhost:1313/contact/</loc>

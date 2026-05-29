@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: mahdisf/mahdisf.github.io
+  branch: main
+  base_url: https://mahdisf-auth.vercel.app # We will create this URL in the next steps
+  auth_endpoint: api/auth
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }

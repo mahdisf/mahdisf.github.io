@@ -17,13 +17,13 @@ languages:
           weight: 1
         - name: Projects
           url: projects/
-          weight: 2
+          weight: 4
         - name: Blog
           url: posts/
+          weight: 2
+        - name: Logs
+          url: Logs/
           weight: 3
-        - name: Archive
-          url: archives/
-          weight: 4
         - name: Search
           url: search/
           weight: 5
@@ -31,7 +31,7 @@ languages:
           url: contact/
           weight: 6
   fa:
-    label: "فارسی"
+    label: "Farsi"
     locale: "fa-IR"
     direction: rtl
     title: "مهدی سرفرازی"
@@ -47,8 +47,8 @@ languages:
         - name: بلاگ
           url: posts/
           weight: 3
-        - name: آرشیو
-          url: archives/
+        - name: لاگ
+          url: Log/
           weight: 4
         - name: جستجو
           url: search/
@@ -58,6 +58,8 @@ languages:
           weight: 6
     params:
       languageAltTitle: "فارسی"
+      label:
+        text: "مهدی سرفرازی"
       homeInfoParams:
         Title: "سلام، من مهدی هستم"
         Content: |
@@ -126,6 +128,10 @@ params:
 
   label:
     text: "Mahdi Sarfarazi"
+    icon: "images/logo_gray.png"
+    iconHeight: 40
+
+
 
   homeInfoParams:
     Title: "Hi, I'm Mahdi"
@@ -147,6 +153,10 @@ params:
 
   assets:
     disableHLJS: true
+    favicon: "images/logo_gray.png"
+    favicon16x16: "images/logo_gray.png"
+    favicon32x32: "images/logo_gray.png"
+    apple_touch_icon: "images/logo_gray.png"
 
 markup:
   goldmark:
