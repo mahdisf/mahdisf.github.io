@@ -170,7 +170,7 @@ params:
 
       I work with ROS2, Python, C++, Isaac Gym, Gazebo, reinforcement learning, robot control, and LLM/VLM-powered autonomy. This site is where I publish notes on robotics software, simulation, control, and practical AI systems.
 
-  profileImage: "images/profile-placeholder.svg"
+  profileImage: "images/profile.jpg"
 
   socialIcons:
     - name: github
@@ -208,7 +208,7 @@ markup:
 
 services:
   googleAnalytics:
-    id: "G-XXXXXXXXXX"
+    id: "G-JK9WJQ8F9C"
   instagram:
     disableInlineCSS: true
   x:
