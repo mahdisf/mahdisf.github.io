@@ -8,6 +8,13 @@ disableShare: true
 ShowBreadcrumbs: false
 ---
 
+<div class="cv-download-wrap">
+  <a href="/cv.pdf" class="cv-download-btn" download>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download CV
+  </a>
+</div>
+
 I am an AI and robotics engineer focused on connecting modern AI systems with physical robots. My work spans ROS2 software, reinforcement learning for control, simulation pipelines, multimodal perception, and hands-on hardware integration.
 
 I am currently pursuing a Master's degree in Mechatronics Engineering at Iran University of Science and Technology, where my research focuses on risk-aware path planning and control for quadruped robots under environmental interaction uncertainty. The work combines deep reinforcement learning, Isaac Gym, and cloud-based training.

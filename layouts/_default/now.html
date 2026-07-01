@@ -1,0 +1,45 @@
+{{- define "main" }}
+
+{{- $logs := where site.RegularPages "Section" "logs" }}
+{{- if not $logs }}
+  {{- range hugo.Sites }}
+    {{- if eq .Language.Lang "en" }}
+      {{- $logs = where .RegularPages "Section" "logs" }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- $sortedLogs := $logs.ByPublishDate.Reverse }}
+
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+    </header>
+
+    {{- if $sortedLogs }}
+    {{- $latest := index $sortedLogs 0 }}
+
+    <p class="now-meta-banner">
+        {{- if eq site.Language.Lang "fa" }}
+        این <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer">صفحه الان ↗</a> من است.
+        {{- else }}
+        This is my <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer">now page ↗</a>.
+        {{- end }}
+        {{ i18n "now_last_updated" | default "It was last updated on" }}
+        <strong>{{ $latest.Date | dateFormat "January 2, 2006" }}</strong>.
+    </p>
+
+    <div class="post-content md-content now-content">
+        {{ $latest.Content }}
+    </div>
+
+    <div class="now-footer">
+        <a href="{{ "logs/" | absLangURL }}" class="more-btn">{{ i18n "view_all_logs" | default "View all logs →" }}</a>
+    </div>
+
+    {{- else }}
+    <p class="now-empty">{{ i18n "no_log_entries" | default "No log entries yet." }}</p>
+    {{- end }}
+
+</article>
+
+{{- end }}

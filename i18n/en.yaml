@@ -1,0 +1,80 @@
+- id: about_me
+  translation: "About me →"
+
+- id: section_projects
+  translation: "Projects & Experience"
+
+- id: section_blog
+  translation: "Blog Posts"
+
+- id: badge_active
+  translation: "Active"
+
+- id: badge_completed
+  translation: "Completed"
+
+- id: view_all_projects
+  translation: "View all projects →"
+
+- id: view_all_posts
+  translation: "View all posts →"
+
+- id: view_all_logs
+  translation: "View all logs →"
+
+- id: now_page_link
+  translation: "now page"
+
+- id: now_last_updated
+  translation: "It was last updated on"
+
+- id: footer_nav_heading
+  translation: "Navigation"
+
+- id: no_log_entries
+  translation: "No log entries yet."
+
+- id: related_posts
+  translation: "Related Posts"
+
+- id: 404_title
+  translation: "Page not found"
+
+- id: 404_desc
+  translation: "The page you're looking for doesn't exist or may have moved."
+
+- id: 404_go_home
+  translation: "← Go home"
+
+- id: 404_search
+  translation: "Search the site"
+
+- id: newsletter_heading
+  translation: "Stay in the Loop"
+
+- id: newsletter_desc
+  translation: "Subscribe on Substack to get new posts delivered to your inbox."
+
+- id: newsletter_cta
+  translation: "Subscribe on Substack →"
+
+- id: cv_download
+  translation: "Download CV"
+
+- id: project_present
+  translation: "Present"
+
+- id: footer_built_with
+  translation: "Built with"
+
+- id: copy_link_title
+  translation: "Copy link to this page"
+
+- id: copy_link_copied
+  translation: "Copied!"
+
+- id: code_copy
+  translation: "copy"
+
+- id: code_copied
+  translation: "copied!"

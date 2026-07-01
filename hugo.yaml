@@ -15,21 +15,24 @@ languages:
         - name: About
           url: about/
           weight: 1
+        - name: Now
+          url: now/
+          weight: 2
         - name: Projects
           url: projects/
           weight: 4
         - name: Blog
           url: posts/
-          weight: 2
+          weight: 3
         - name: Logs
           url: logs/
-          weight: 3
+          weight: 5
         - name: Search
           url: search/
-          weight: 5
+          weight: 6
         - name: Contact
           url: contact/
-          weight: 6
+          weight: 7
   fa:
     label: "Farsi"
     locale: "fa-IR"
@@ -41,23 +44,27 @@ languages:
         - name: درباره
           url: about/
           weight: 1
+        - name: الان
+          url: now/
+          weight: 2
         - name: پروژه‌ها
           url: projects/
-          weight: 2
+          weight: 3
         - name: بلاگ
           url: posts/
-          weight: 3
+          weight: 4
         - name: لاگ
           url: logs/
-          weight: 4
+          weight: 5
         - name: جستجو
           url: search/
-          weight: 5
+          weight: 6
         - name: تماس
           url: contact/
-          weight: 6
+          weight: 7
     params:
       languageAltTitle: "فارسی"
+      description: "وب‌سایت شخصی و وبلاگ فنی مهدی سرفرازی، مهندس هوش مصنوعی و رباتیک در حوزه ROS2، یادگیری تقویتی، کنترل ربات و خودمختاری رباتیک."
       label:
         text: "مهدی سرفرازی"
       homeInfoParams:
@@ -87,6 +94,27 @@ taxonomies:
   category: categories
   tag: tags
   series: series
+
+fuseOpts:
+  isCaseSensitive: false
+  shouldSort: true
+  location: 0
+  distance: 1000
+  threshold: 0.4
+  minMatchCharLength: 2
+  keys: ["title", "summary", "content", "tags"]
+
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: keywords
+      weight: 80
+    - name: date
+      weight: 10
 
 outputFormats:
   llms:
@@ -130,8 +158,8 @@ params:
 
   label:
     text: "Mahdi Sarfarazi"
-    icon: "images/logo_gray.png"
-    iconHeight: 40
+    icon: "images/logo.svg"
+    iconHeight: 30
 
 
 
@@ -141,6 +169,8 @@ params:
       AI and robotics engineer focused on connecting learning-based intelligence with physical systems.
 
       I work with ROS2, Python, C++, Isaac Gym, Gazebo, reinforcement learning, robot control, and LLM/VLM-powered autonomy. This site is where I publish notes on robotics software, simulation, control, and practical AI systems.
+
+  profileImage: "images/profile-placeholder.svg"
 
   socialIcons:
     - name: github
@@ -153,12 +183,21 @@ params:
       title: Email
       url: "mailto:Mahdi_Sarfarazi@outlook.com"
 
+  social:
+    twitter: "@yourtwitterhandle"
+
+  schema:
+    publisherType: "Person"
+
+  comments: true
+  ShowFullTextinRSS: true
+
   assets:
     disableHLJS: true
-    favicon: "images/logo_gray.png"
-    favicon16x16: "images/logo_gray.png"
-    favicon32x32: "images/logo_gray.png"
-    apple_touch_icon: "images/logo_gray.png"
+    favicon: "images/logo.svg"
+    favicon16x16: "images/logo.svg"
+    favicon32x32: "images/logo.svg"
+    apple_touch_icon: "images/logo.svg"
 
 markup:
   goldmark:
@@ -168,6 +207,8 @@ markup:
     noClasses: false
 
 services:
+  googleAnalytics:
+    id: "G-XXXXXXXXXX"
   instagram:
     disableInlineCSS: true
   x:

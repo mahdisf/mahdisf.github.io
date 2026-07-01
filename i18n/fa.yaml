@@ -1,0 +1,80 @@
+- id: about_me
+  translation: "درباره من ←"
+
+- id: section_projects
+  translation: "پروژه‌ها و تجربه"
+
+- id: section_blog
+  translation: "پست‌های وبلاگ"
+
+- id: badge_active
+  translation: "فعال"
+
+- id: badge_completed
+  translation: "تکمیل شده"
+
+- id: view_all_projects
+  translation: "مشاهده همه پروژه‌ها ←"
+
+- id: view_all_posts
+  translation: "مشاهده همه پست‌ها ←"
+
+- id: view_all_logs
+  translation: "مشاهده همه لاگ‌ها ←"
+
+- id: now_page_link
+  translation: "صفحه الان"
+
+- id: now_last_updated
+  translation: "آخرین به‌روزرسانی در"
+
+- id: footer_nav_heading
+  translation: "ناوبری"
+
+- id: no_log_entries
+  translation: "هنوز هیچ لاگی وجود ندارد."
+
+- id: related_posts
+  translation: "پست‌های مرتبط"
+
+- id: 404_title
+  translation: "صفحه پیدا نشد"
+
+- id: 404_desc
+  translation: "صفحه‌ای که دنبالش هستید وجود ندارد یا جابجا شده است."
+
+- id: 404_go_home
+  translation: "رفتن به خانه →"
+
+- id: 404_search
+  translation: "جستجو در سایت"
+
+- id: newsletter_heading
+  translation: "در جریان باشید"
+
+- id: newsletter_desc
+  translation: "در Substack مشترک شوید تا پست‌های جدید به ایمیلتان برسد."
+
+- id: newsletter_cta
+  translation: "عضویت در Substack →"
+
+- id: cv_download
+  translation: "دانلود رزومه"
+
+- id: project_present
+  translation: "تاکنون"
+
+- id: footer_built_with
+  translation: "ساخته شده با"
+
+- id: copy_link_title
+  translation: "کپی لینک این صفحه"
+
+- id: copy_link_copied
+  translation: "کپی شد!"
+
+- id: code_copy
+  translation: "کپی"
+
+- id: code_copied
+  translation: "کپی شد!"

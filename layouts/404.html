@@ -1,0 +1,43 @@
+{{- define "main" }}
+<div class="notfound-container" id="notfound-en">
+    <div class="notfound-code">404</div>
+    <h1 class="notfound-title">Page not found</h1>
+    <p class="notfound-desc">The page you&rsquo;re looking for doesn&rsquo;t exist or may have moved.</p>
+    <div class="notfound-actions">
+        <a href="/" class="notfound-btn notfound-btn-primary">← Go home</a>
+        <a href="/search/" class="notfound-btn notfound-btn-secondary">Search the site</a>
+    </div>
+</div>
+<div class="notfound-container" id="notfound-fa" style="display:none" dir="rtl">
+    <div class="notfound-code">404</div>
+    <h1 class="notfound-title">صفحه پیدا نشد</h1>
+    <p class="notfound-desc">صفحه‌ای که دنبالش هستید وجود ندارد یا جابجا شده است.</p>
+    <div class="notfound-actions">
+        <a href="/fa/" class="notfound-btn notfound-btn-primary">رفتن به خانه →</a>
+        <a href="/fa/search/" class="notfound-btn notfound-btn-secondary">جستجو در سایت</a>
+    </div>
+</div>
+<script>
+if (window.location.pathname.startsWith('/fa/')) {
+    document.getElementById('notfound-en').style.display = 'none';
+    document.getElementById('notfound-fa').style.display = '';
+    // Switch page to RTL/FA — affects PaperMod's dir-based CSS
+    var html = document.documentElement;
+    html.setAttribute('lang', 'fa');
+    html.setAttribute('dir', 'rtl');
+    // Update nav links so they point into /fa/
+    document.querySelectorAll('#menu a[href]').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if (href === '/') {
+            a.setAttribute('href', '/fa/');
+        } else if (href && href.startsWith('/') && !href.startsWith('/fa/')) {
+            a.setAttribute('href', '/fa' + href);
+        }
+    });
+    // Update logo link
+    document.querySelectorAll('header a[href="/"]').forEach(function(a) {
+        a.setAttribute('href', '/fa/');
+    });
+}
+</script>
+{{- end }}

@@ -1,21 +1,137 @@
 backend:
   name: github
-  repo: mahdisf/mahdisf.github.io
+  repo: mahdisf/mahdisf.github.io # The GitHub repo that holds this site's SOURCE (where content/ lives)
   branch: main
-  base_url: https://mahdisf-auth.vercel.app # We will create this URL in the next steps
+  base_url: https://mahdisf-auth.vercel.app # OAuth proxy — see TODO.md "CMS / Sveltia OAuth" section
   auth_endpoint: api/auth
 
+# Where uploaded images are stored, and how they are referenced in markdown.
 media_folder: "static/images"
 public_folder: "/images"
 
+# Bilingual editing. Folder collections become leaf bundles (index.md / index.fa.md);
+# file collections become about.md / about.fa.md — matching Hugo's translation scheme.
+i18n:
+  structure: multiple_files
+  locales: [en, fa]
+  default_locale: en
+
 collections:
+  # ----------------------------------------------------------------- Blog posts
   - name: "posts"
     label: "Posts"
+    label_singular: "Post"
     folder: "content/posts"
     create: true
+    i18n: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime", i18n: duplicate }
+      - { label: "Description", name: "description", widget: "string", required: false, i18n: true }
+      - { label: "Author", name: "author", widget: "list", default: ["Mahdi Sarfarazi"], required: false, i18n: duplicate }
+      - { label: "Tags", name: "tags", widget: "list", default: [], required: false, i18n: duplicate }
+      - { label: "Categories", name: "categories", widget: "list", default: [], required: false, i18n: duplicate }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true, i18n: duplicate }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # -------------------------------------------------------------------- Projects
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    i18n: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime", i18n: duplicate }
+      - { label: "Start Date", name: "startDate", widget: "datetime", required: false, i18n: duplicate }
+      - { label: "End Date", name: "endDate", widget: "string", required: false, default: "", i18n: duplicate }
+      - { label: "GitHub URL", name: "github", widget: "string", required: false, default: "", i18n: duplicate }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true, i18n: duplicate }
+      - { label: "Tags", name: "tags", widget: "list", default: ["project"], required: false, i18n: duplicate }
+      - label: "Cover"
+        name: "cover"
+        widget: "object"
+        required: false
+        i18n: true
+        fields:
+          - { label: "Image", name: "image", widget: "image", required: false, default: "/images/project-default.svg", i18n: duplicate }
+          - { label: "Caption", name: "caption", widget: "string", required: false, default: "", i18n: true }
+      - { label: "Summary", name: "summary", widget: "text", required: false, default: "", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # ------------------------------------------------------------------------ Logs
+  - name: "logs"
+    label: "Logs"
+    label_singular: "Log"
+    folder: "content/logs"
+    create: true
+    i18n: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Publish Date", name: "date", widget: "datetime", i18n: duplicate }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true, i18n: duplicate }
+      - { label: "Tags", name: "tags", widget: "list", default: ["logs"], required: false, i18n: duplicate }
+      - { label: "Summary", name: "summary", widget: "text", required: false, default: "", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # -------------------------------------------------------------- Singleton pages
+  - name: "pages"
+    label: "Pages"
+    i18n: true
+    files:
+      - name: "home"
+        label: "Home"
+        file: "content/_index.md"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Description", name: "description", widget: "string", required: false, i18n: true }
+          - { label: "Body", name: "body", widget: "markdown", required: false, i18n: true }
+
+      - name: "about"
+        label: "About"
+        file: "content/about.md"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Description", name: "description", widget: "string", required: false, i18n: true }
+          - { label: "Author", name: "author", widget: "list", default: ["Mahdi Sarfarazi"], required: false, i18n: duplicate }
+          - { label: "Hidden in RSS", name: "hiddenInRss", widget: "boolean", default: true, required: false, i18n: duplicate }
+          - { label: "Disable Share", name: "disableShare", widget: "boolean", default: true, required: false, i18n: duplicate }
+          - { label: "Show Breadcrumbs", name: "ShowBreadcrumbs", widget: "boolean", default: false, required: false, i18n: duplicate }
+          - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+      - name: "now"
+        label: "Now"
+        file: "content/now.md"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Description", name: "description", widget: "string", required: false, i18n: true }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "now" }
+          - { label: "Body", name: "body", widget: "markdown", required: false, i18n: true }
+
+      - name: "contact"
+        label: "Contact"
+        file: "content/contact.md"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Description", name: "description", widget: "string", required: false, i18n: true }
+          - { label: "Author", name: "author", widget: "list", default: ["Mahdi Sarfarazi"], required: false, i18n: duplicate }
+          - { label: "Disable Share", name: "disableShare", widget: "boolean", default: true, required: false, i18n: duplicate }
+          - { label: "Show Breadcrumbs", name: "ShowBreadcrumbs", widget: "boolean", default: false, required: false, i18n: duplicate }
+          - { label: "Body", name: "body", widget: "markdown", i18n: true }

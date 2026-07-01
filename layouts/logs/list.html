@@ -1,86 +1,69 @@
 {{- define "main" }}
 
 <header class="page-header">
-  <h1>
-    {{ .Title }}
-    {{- if (.Param "ShowRssButtonInSectionTermList") }}
-    {{- $rss := (.OutputFormats.Get "rss") }}
-    {{- if (eq .Kind `page`) }}
-    {{- $rss = (.Parent.OutputFormats.Get "rss") }}
+    <h1>
+        {{ .Title }}
+        {{- with .OutputFormats.Get "rss" }}
+        <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" height="20">
+                <path d="M4 11a9 9 0 0 1 9 9" />
+                <path d="M4 4a16 16 0 0 1 16 16" />
+                <circle cx="5" cy="19" r="1" />
+            </svg>
+        </a>
+        {{- end }}
+    </h1>
+    {{- with .Description }}
+    <div class="post-description">{{ . }}</div>
     {{- end }}
-    {{- with $rss }}
-    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" height="23">
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
-      </svg>
-    </a>
-    {{- end }}
-    {{- end }}
-  </h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description }}
-  </div>
-  {{- end }}
 </header>
 
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-
-{{- /* For the logs section show posts + logs */ -}}
-{{- if or (eq .Section "logs") (eq .Type "logs") }}
-{{- $pages = where site.RegularPages "Section" "in" (slice "posts" "logs" "projects") }}
-{{- else if site.Params.ShowAllPagesInArchive }}
-{{- $pages = site.RegularPages }}
-{{- end }}
-
-{{- range $pages.GroupByPublishDate "2006" }}
-{{- if ne .Key "0001" }}
-<div class="archive-year">
-  {{- $year := replace .Key "0001" "" }}
-  <h2 class="archive-year-header" id="{{ $year }}">
-    <a class="archive-header-link" href="#{{ $year }}">
-      {{- $year -}}
-    </a>
-    <sup class="archive-count">&nbsp;{{ len .Pages }}</sup>
-  </h2>
-  {{- range .Pages.GroupByDate "January" }}
-  <div class="archive-month">
-    <h3 class="archive-month-header" id="{{ $year }}-{{ .Key }}">
-      <a class="archive-header-link" href="#{{ $year }}-{{ .Key }}">
-        {{- .Key -}}
-      </a>
-      <sup class="archive-count">&nbsp;{{ len .Pages }}</sup>
-    </h3>
-    <div class="archive-posts">
-      {{- range .Pages }}
-      {{- if eq .Kind "page" }}
-      <div class="archive-entry">
-        <h3 class="archive-entry-title entry-hint-parent">
-          {{- .Title | markdownify }}
-          {{- if .Draft }}
-          <span class="entry-hint" title="Draft">
-            <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 -960 960 960" fill="currentColor">
-              <path
-                d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-            </svg>
-          </span>
-          {{- end }}
-        </h3>
-        <div class="archive-meta">
-          {{- partial "post_meta.html" . -}}
-        </div>
-        <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
-      </div>
-      {{- end }}
-      {{- end }}
-    </div>
-  </div>
+{{- $logPages := where site.RegularPages "Section" "logs" }}
+{{- if not $logPages }}
+  {{- range hugo.Sites }}
+    {{- if eq .Language.Lang "en" }}
+      {{- $logPages = where .RegularPages "Section" "logs" }}
+    {{- end }}
   {{- end }}
-</div>
 {{- end }}
+{{- $logs := $logPages.ByPublishDate.Reverse }}
+
+{{- if $logs }}
+<div class="timeline">
+    {{- range $index, $page := $logs }}
+    <div class="tl-item">
+        <div class="tl-spine">
+            <div class="tl-dot{{ if eq $index 0 }} tl-dot-latest{{ end }}"></div>
+            <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+            <article class="tl-card">
+                <time class="tl-date" datetime="{{ $page.Date.Format "2006-01-02" }}">
+                    {{ $page.Date | dateFormat "January 2, 2006" }}
+                </time>
+                <h2 class="tl-title">
+                    <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                </h2>
+                {{- with $page.Summary }}
+                <p class="tl-summary">{{ . | plainify }}</p>
+                {{- end }}
+                {{- with $page.Params.tags }}
+                <div class="tl-tags">
+                    {{- range . }}
+                    <span class="tl-tag">{{ . }}</span>
+                    {{- end }}
+                </div>
+                {{- end }}
+                <a class="entry-link" aria-label="log link to {{ $page.Title | plainify }}"
+                    href="{{ $page.Permalink }}"></a>
+            </article>
+        </div>
+    </div>
+    {{- end }}
+</div>
+{{- else }}
+<p class="tl-empty">{{ i18n "no_log_entries" | default "No log entries yet." }}</p>
 {{- end }}
 
-{{- end }}{{/* end main */}}
+{{- end }}

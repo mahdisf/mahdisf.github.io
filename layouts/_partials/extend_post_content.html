@@ -1,0 +1,16 @@
+{{- if and (eq .Kind "page") (ne .Section "logs") }}
+{{- $related := first 3 (site.RegularPages.Related .) }}
+{{- if $related }}
+<div class="related-posts">
+    <h3 class="related-posts-heading">{{ i18n "related_posts" | default "Related Posts" }}</h3>
+    <div class="related-posts-list">
+        {{- range $related }}
+        <a href="{{ .Permalink }}" class="related-post-item">
+            <span class="related-post-title">{{ .Title }}</span>
+            <span class="related-post-meta">{{ .Date | dateFormat "Jan 2006" }}</span>
+        </a>
+        {{- end }}
+    </div>
+</div>
+{{- end }}
+{{- end }}

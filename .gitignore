@@ -1,0 +1,19 @@
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Hugo modules
+hugo_stats.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Local env / secrets
+.env
+.env.local
+
+# Personal notes (local-only)
+/TODO.md

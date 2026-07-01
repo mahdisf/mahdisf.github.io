@@ -1,0 +1,28 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <div class="home-info-inner">
+        <div class="home-info-text">
+            <header class="entry-header">
+                <h1>{{ .Title | markdownify }}</h1>
+            </header>
+            <div class="entry-content md-content">
+                {{ $opts := dict "display" "block" }}
+                {{ .Content | $.Page.RenderString $opts }}
+            </div>
+            <footer class="entry-footer">
+                {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+            </footer>
+            <div class="home-info-more">
+                <a href="{{ "about/" | absLangURL }}" class="more-btn">{{ i18n "about_me" | default "About me →" }}</a>
+            </div>
+        </div>
+        <div class="home-info-avatar">
+            {{- with site.Params.profileImage }}
+            <img src="{{ . | absURL }}" alt="{{ site.Params.author | default site.Title }}" loading="lazy">
+            {{- else }}
+            <div class="avatar-placeholder">MS</div>
+            {{- end }}
+        </div>
+    </div>
+</article>
+{{- end -}}
