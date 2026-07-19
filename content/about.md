@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "About Mahdi Sarfarazi, an AI and robotics engineer working on ROS2, reinforcement learning, and robotic autonomy."
+description: "About Mahdi Sarfarazi, a robotics software engineer and technical product manager building autonomous systems and AI-assisted engineering products."
 author: ["Mahdi Sarfarazi"]
 draft: false
 hiddenInRss: true
@@ -15,54 +15,85 @@ ShowBreadcrumbs: false
   </a>
 </div>
 
-I am an AI and robotics engineer focused on connecting modern AI systems with physical robots. My work spans ROS2 software, reinforcement learning for control, simulation pipelines, multimodal perception, and hands-on hardware integration.
+I am a robotics software engineer and technical product manager with more than four years of experience across quadruped autonomy, rehabilitation exoskeletons, robot simulation, embedded control, and agentic systems. I work across the engineering and product layers: from ROS2 architecture and robot integration to customer discovery, requirements, prioritization, and MVP delivery.
 
-I am currently pursuing a Master's degree in Mechatronics Engineering at Iran University of Science and Technology, where my research focuses on risk-aware path planning and control for quadruped robots under environmental interaction uncertainty. The work combines deep reinforcement learning, Isaac Gym, and cloud-based training.
+At LabCD.ai, I moved from Robotics Software Engineer to Technical Product Manager in February 2026. I helped take AgenticControl, a multi-agent framework for control-system design, from concept to MVP; conducted more than 100 customer interviews; defined product requirements and system architecture; and coordinated seven engineers and three stakeholders.
+
+Alongside my product work, I am completing an M.Sc. in Mechatronics Engineering at Iran University of Science and Technology. My research focuses on risk-aware quadruped navigation using deep reinforcement learning, Isaac Gym, Dijkstra planning, and MPPI. The reported framework trained across 12,000 parallel environments, reached 94.2% success on unseen maps, and reduced simulated collisions by 71.4% relative to monolithic baselines.
 
 ## What I Work On
 
-- Robot learning, deep reinforcement learning, and control policy development.
-- ROS2 robotic software in Python and C++.
-- Simulation-to-hardware workflows using Isaac Gym, Isaac Sim, and Gazebo.
-- LLM and VLM integration for robotic task planning and autonomy.
-- Multimodal data pipelines using vision, proprioception, and state feedback.
+- ROS2 robotic software in Python and C++, including sensor, actuator, control, and motion-planning pipelines.
+- Robot learning, reinforcement learning, perception, and risk-aware autonomy.
+- Simulation-to-real and hardware-in-the-loop workflows with Isaac Gym/Sim, Gazebo, RViz, and MoveIt.
+- Product vision, MRD/PRD authoring, customer discovery, roadmapping, and MVP scoping.
+- Cross-functional delivery across robotics, control, AI, software, and business teams.
 
-## Experience
+## Selected Experience
+
+**Technical Product Manager**<br>
+LabCD.ai, Feb 2026 - Present
+
+- Authored the founding MRD, business plan, and business canvas for an agentic-AI startup.
+- Turned market research, competitive analysis, and 100+ customer interviews into product requirements and a prioritized roadmap.
+- Defined the architecture and validation logic for AgenticControl and helped advance it from concept to MVP.
+- Coordinated seven engineers and three stakeholders across AI, control, software, and business.
+
+**Robotics Software Engineer**<br>
+LabCD.ai, Nov 2025 - Feb 2026
+
+- Designed an agent workflow for trimming, state-space realization, controller generation, and closed-loop simulation.
+- Built topology parsing and signal-interconnection logic and integrated numerical solving, linearization, stability, and frequency-domain analysis.
 
 **Researcher and Robotic Software Engineer**  
-IUST AI and Dynamic Systems Research Lab, Sep 2024 - Present
+IUST AI and Dynamic Systems Research Lab, Nov 2024 - Present
 
-- Develop deep reinforcement learning control policies for quadruped robot locomotion.
-- Build simulation-based data collection pipelines for proprioceptive and state data.
-- Study risk-aware planning and robust control for uncertain robot-environment interaction.
+- Designed requirements, evaluation criteria, and reinforcement-learning components for hierarchical quadruped navigation.
+- Orchestrated 12,000 Isaac Gym environments and combined global Dijkstra planning with 256,000 concurrent MPPI trajectories.
+- Contributed to ROS2/RViz sim-to-real integration for a 5-DOF robotic arm.
+
+**Technical and Product Manager**<br>
+Diginext Startup Camp, Aug 2025 - Nov 2025
+
+- Defined the vision, requirements, roadmap, and technical architecture for an LLM-powered video-editing product.
+- Built an internal MVP prototype through five-week Agile sprints; the project paused before external user testing or launch.
 
 **Robotic Software Engineer**  
 FUM Center of Advanced Rehabilitation and Robotics Research, Feb 2022 - Jan 2024
 
-- Engineered modular ROS2 stacks in C++ and Python for exoskeleton and rehabilitation robots.
-- Implemented AI-based controllers using multi-sensor feedback.
-- Integrated, calibrated, and tuned motors, sensors, and embedded control hardware.
+- Built modular ROS2 C++/Python stacks for exoskeleton sensing, motor control, calibration, and real-time assistive torque.
+- Served as project manager and main author for a fuzzy assist-as-needed knee-exoskeleton controller running at 250 Hz.
+- Integrated and calibrated sensors, motors, Raspberry Pi control boards, and communication interfaces.
 
 ## Education
 
 **M.Sc. Mechatronics Engineering**  
 Iran University of Science and Technology, 2024 - 2026
 
-Thesis: Risk-aware path planning and control for a quadruped robot considering interaction uncertainty with the environment using deep reinforcement learning, Isaac Gym, and cloud-based training.
+Thesis: Risk-aware path planning and control for a quadruped robot under interaction uncertainty using deep reinforcement learning, Isaac Gym, and MPC/MPPI.
+
+Bronze Medalist, 2025 Talent Development Award, Department of Mechanical Engineering.
+
+**Diploma in Product Management**<br>
+Alison Academy, 2023 - 2024
+
+Product lifecycle management, Agile/Scrum, UX and design thinking, market research, experimentation, and data-driven strategy.
 
 **B.Sc. Mechanical Engineering**  
-Ferdowsi University of Mashhad, 2018 - 2024
+Ferdowsi University of Mashhad, Sep 2018 - Feb 2024
 
 Project: Design, simulation, and implementation of a real-time fuzzy control system for a knee exoskeleton robot using MATLAB, C++, Python, ROS2, and Raspberry Pi.
 
 Awarded Best Technologist Student of 2023 by the Department of Mechanical Engineering.
 
-## Skills
+## Core Capabilities
 
-**AI and ML:** Deep reinforcement learning, multimodal learning, control theory, LLM/VLM integration, OpenCV.
+**Robotics software:** ROS2, Python, C++, RViz, MoveIt, Gazebo, sensor and actuator integration.
 
-**Robotics:** ROS/ROS2, Isaac Sim/Gym, Gazebo, motion planning, dynamic modeling.
+**Simulation and control:** Isaac Gym/Sim, MATLAB/Simulink, Simscape Multibody, reinforcement learning, MPC/MPPI, fuzzy and PID control, sim-to-real, hardware-in-the-loop.
 
-**Languages and tools:** Python, C++, MATLAB, Git, Docker, Linux, Bash.
+**AI and perception:** Deep reinforcement learning, LLM/VLM and multi-agent systems, OpenCV, YOLO, Depth Anything V2, Kalman filtering.
 
-**Hardware:** Raspberry Pi, Arduino, motor controllers, IMUs, encoders, sensor integration.
+**Product and delivery:** Product strategy, MRD/PRD, customer discovery, roadmapping, prioritization, Agile/Scrum, MVP development, and stakeholder coordination.
+
+**Engineering tools and hardware:** Git, Docker, Linux, MATLAB, Raspberry Pi, Arduino, ESP32, motor controllers, IMUs, encoders, and PLC systems.

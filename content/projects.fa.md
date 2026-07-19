@@ -1,6 +1,6 @@
 ---
 title: "پروژه‌ها"
-description: "پروژه‌های منتخب هوش مصنوعی و رباتیک مهدی سرفرازی."
+description: "پروژه‌های منتخب مهدی سرفرازی در نرم‌افزار رباتیک، خودمختاری، کنترل و مدیریت محصول فنی."
 author: ["Mahdi Sarfarazi"]
 draft: false
 disableShare: true

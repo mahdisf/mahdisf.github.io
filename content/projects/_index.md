@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Selected AI and robotics projects by Mahdi Sarfarazi."
+description: "Selected robotics software, autonomy, control, and technical product projects by Mahdi Sarfarazi."
 author:
   - "Mahdi Sarfarazi"
 draft: false

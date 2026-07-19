@@ -1,4 +1,4 @@
 ---
 title: "Home"
-description: "Personal website and technical blog of Mahdi Sarfarazi, AI and robotics engineer"
+description: "Personal website and technical blog of Mahdi Sarfarazi, robotics software engineer and technical product manager."
 ---

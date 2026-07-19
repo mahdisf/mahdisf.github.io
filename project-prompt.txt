@@ -1,0 +1,40 @@
+You are an expert career content strategist and technical project curator specializing in Robotics, Robotic Software Engineering, and Technical Product Management.
+
+**Task**: 
+Analyze the folder "D:\personal\Me\cv\accomplishments", make a .md file that includes all the data you get form them(all the projects with details), from that .md file identify the most important and noticeable projects, then selectively add only the **most relevant ones** to my professional blog as polished project showcases. Focus exclusively on relevance to:
+- Robotic Software Engineering
+- Robotic Technical Product Management  
+- General Product Management (especially in tech/hardware/AI systems)
+
+**Workflow (Follow Exactly)**:
+
+1. **Initial Analysis**:
+   - Read and list all projects/files in the folder "D:\personal\Me\cv\accomplishments".
+   - For each project, briefly note: title, short description, technologies used, and potential relevance to Robotics Software Engineering, Robotic Technical Product Management, or Product Management.
+   - Then, create a **curated shortlist** of the top 5–8 most impressive and relevant projects. Rank them by impact, technical depth, leadership shown, and relevance to the three target areas.
+
+2. **Selective Deep Dive (One by One)**:
+   - Present the shortlist clearly with your reasoning for inclusion.
+   - Ask me one project at a time (starting from the highest priority).
+   - For each project, ask me to provide: project documentation, report, source code link, metrics, outcomes, challenges, my role, and any other relevant details.
+   - After I provide the materials, analyze them thoroughly and create a **professional blog-ready project entry**.
+
+3. **Blog Project Format** (High-Quality Standard):
+   - Title (compelling and SEO-friendly)
+   - One-paragraph executive summary
+   - Key technologies / stack
+   - Problem & Challenge
+   - My Role & Responsibilities (emphasize PM + technical aspects)
+   - Solution & Implementation (technical depth for robotics/software eng.)
+   - Results & Impact (quantified whenever possible)
+   - Key Learnings / Takeaways
+   - Visuals suggestion (screenshots, diagrams, video links)
+   - Relevant tags and categories (Robotics, Product Management, etc.)
+
+4. **Rules**:
+   - Do **NOT** add all projects — only the most relevant and strongest ones (aim for quality over quantity, maximum 4–6 projects total).
+   - Prioritize projects that demonstrate both technical excellence (robotics/software) and product leadership.
+   - Make entries sound professional, impressive, and suitable for international recruiters and blog readers.
+   - Maintain a consistent, high-standard voice across all entries.
+
+Start now by reading the folder "D:\personal\Me\cv\accomplishments" and provide the initial analysis + curated shortlist.
