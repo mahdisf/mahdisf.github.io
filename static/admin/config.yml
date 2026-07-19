@@ -15,6 +15,7 @@ i18n:
   structure: multiple_files
   locales: [en, fa]
   default_locale: en
+  omit_default_locale_from_file_path: true
 
 collections:
   # ----------------------------------------------------------------- Blog posts
