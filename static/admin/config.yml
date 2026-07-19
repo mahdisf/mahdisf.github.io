@@ -2,7 +2,7 @@ backend:
   name: github
   repo: mahdisf/mahdisf.github.io # The GitHub repo that holds this site's SOURCE (where content/ lives)
   branch: main
-  base_url: https://mahdisf-auth.vercel.app # OAuth proxy — see TODO.md "CMS / Sveltia OAuth" section
+  base_url: https://sveltia-cms-auth.mahdi-sarfarazi-99.workers.dev # OAuth proxy — see TODO.md "CMS / Sveltia OAuth" section
   auth_endpoint: api/auth
 
 # Where uploaded images are stored, and how they are referenced in markdown.
