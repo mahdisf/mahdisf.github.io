@@ -3,7 +3,7 @@ title: "Adaptive sit-to-stand assistance for the FUM-NEXA knee exoskeleton"
 date: 2025-08-23
 draft: false
 description: "Real-time ROS2 control for a knee exoskeleton that adapts sit-to-stand assistance to the user's measured motion. Engineering prototype; first-author preprint."
-summary: "A fuzzy Strength Index adapts knee-exoskeleton torque during sit-to-stand in real time on a Raspberry Pi running ROS2. In a four-person engineering study, measured muscle effort fell by 30% at slow speed."
+summary: "A fuzzy Strength Index adapts knee-exoskeleton torque during sit-to-stand in real time on a Raspberry Pi running ROS2. In a five-person engineering study, measured muscle effort fell by 30% at slow speed."
 keywords: ["knee exoskeleton", "assist-as-needed control", "fuzzy logic", "ROS2", "sit-to-stand", "robotics case study"]
 tags: ["robotics", "ROS2", "exoskeleton", "fuzzy control", "human-robot interaction"]
 categories: ["Case study"]
@@ -14,14 +14,14 @@ status: "Research prototype · preprint"
 problem: "Fixed torque profiles can't tell a user who needs help from one who doesn't, and the device's own weight adds effort."
 role: "Project manager and first author in a university lab team. I owned the control concept and its ROS2 integration."
 work: "Estimate how much help the user needs from signals the robot already has, and scale a reference torque by that amount."
-evidence: "With four healthy subjects, muscle effort was 30.34% lower than without the exoskeleton at slow speed and 7.59% lower at fast speed."
+evidence: "With five healthy subjects, muscle effort was 30.34% lower than without the exoskeleton at slow speed and 7.59% lower at fast speed."
 fa:
   title: "کمک تطبیقی برای برخاستن از صندلی با اگزوسکلتون زانوی FUM-NEXA"
   status: "نمونه اولیه پژوهشی · پیش‌انتشار"
   problem: "پروفایل‌های گشتاور ثابت نمی‌توانند کاربری را که به کمک نیاز دارد از کاربری که نیاز ندارد تشخیص دهند و وزن خود دستگاه هم تلاش را افزایش می‌دهد."
   role: "مدیر پروژه و نویسنده اول در تیم یک آزمایشگاه دانشگاهی. ایده کنترلی و یکپارچه‌سازی آن با ROS2 با من بود."
   work: "برآورد میزان کمکی که کاربر لازم دارد از سیگنال‌هایی که ربات از قبل دارد، و مقیاس‌دهی یک گشتاور مرجع به همان اندازه."
-  evidence: "با چهار آزمودنی سالم، تلاش عضلانی در سرعت آهسته ۳۰٫۳۴٪ و در سرعت زیاد ۷٫۵۹٪ کمتر از حالت بدون اگزوسکلتون بود."
+  evidence: "با پنج آزمودنی سالم، تلاش عضلانی در سرعت آهسته ۳۰٫۳۴٪ و در سرعت زیاد ۷٫۵۹٪ کمتر از حالت بدون اگزوسکلتون بود."
 cover:
   image: "/projects/fuzzy-aan-knee-exoskeleton/cover.jpg"
   alt: "FUM-NEXA knee exoskeleton shown as a CAD design and as the manufactured prototype."
@@ -34,7 +34,7 @@ comments: false
 
 <div class="case-summary">
 
-A fuzzy "Strength Index" adapts knee-exoskeleton torque in real time while the user stands up from a chair. In a four-person engineering study it cut measured muscle effort by 30% at slow speed, with smaller gains at faster speeds.
+A fuzzy "Strength Index" adapts knee-exoskeleton torque in real time while the user stands up from a chair. In a five-person engineering study it cut measured muscle effort by 30% at slow speed, with smaller gains at faster speeds.
 
 This is a research prototype from FUM CARE. I am first author of a [preprint on SSRN](https://doi.org/10.2139/ssrn.6335794), which has not been peer-reviewed. The study was an engineering evaluation and was not clinical.
 
@@ -45,7 +45,7 @@ This is a research prototype from FUM CARE. I am first author of a [preprint on 
   <div><dt>Device</dt><dd>FUM-NEXA: passive hip and actuated knee joint per leg</dd></div>
   <div><dt>Task</dt><dd>Standing up from a 46 cm chair</dd></div>
   <div><dt>Runtime</dt><dd>Raspberry Pi 4B, ROS2 (Python/C++), CAN motor control</dd></div>
-  <div><dt>Evaluation</dt><dd>4 healthy subjects × 3 speeds × 3 device conditions</dd></div>
+  <div><dt>Evaluation</dt><dd>5 healthy subjects × 3 speeds × 3 device conditions</dd></div>
 </dl>
 
 ## The problem {#the-problem}
@@ -86,7 +86,7 @@ The evaluation included a motors-off condition, which separated the device's bur
 
 ## Results {#results}
 
-Average change in muscle effort (EMG IRMS) across the four subjects, relative to standing up without the exoskeleton. Positive values mean less effort.
+Average change in muscle effort (EMG IRMS) across the five subjects, relative to standing up without the exoskeleton. Positive values mean less effort.
 
 | Condition | Speed | Effort change | Variability change |
 | --- | --- | ---: | ---: |
@@ -101,7 +101,7 @@ Assistance reduced measured effort at all three speeds. The benefit was largest 
 
 <div class="callout">
 
-Four healthy subjects are not a clinical cohort. These results show engineering feasibility and say nothing yet about rehabilitation efficacy. The study did not report latency, confidence intervals, statistical significance, actuator safety margins or long-term reliability. The next step would need more and more varied participants, comfort and safety measures, and repeatability data.
+Five healthy subjects are not a clinical cohort. These results show engineering feasibility and say nothing yet about rehabilitation efficacy. The study did not report latency, confidence intervals, statistical significance, actuator safety margins or long-term reliability. The next step would need more and more varied participants, comfort and safety measures, and repeatability data.
 
 </div>
 
@@ -151,7 +151,7 @@ The controller is written in Python, with C++ ROS2 nodes for CAN reading and mot
 <details>
 <summary>Experimental protocol</summary>
 
-Four healthy subjects stood up from a 46 cm chair at three target speeds (slow 20°/s, normal 35°/s, fast 60°/s) under three conditions: no exoskeleton, exoskeleton with motors off, and exoskeleton with assistance at the 50% setting. EMG was recorded from the vastus lateralis, semimembranosus and hamstrings. The analysis used IRMS as a measure of overall muscle effort, signal standard deviation for variability, and percentage change from the no-exoskeleton baseline.
+Five healthy subjects stood up from a 46 cm chair at three target speeds (slow 20°/s, normal 35°/s, fast 60°/s) under three conditions: no exoskeleton, exoskeleton with motors off, and exoskeleton with assistance at the 50% setting. EMG was recorded from the vastus lateralis, semimembranosus and hamstrings. The analysis used IRMS as a measure of overall muscle effort, signal standard deviation for variability, and percentage change from the no-exoskeleton baseline.
 
 ![Processed vastus lateralis EMG for the nine speed and condition combinations](emg-results.png)
 

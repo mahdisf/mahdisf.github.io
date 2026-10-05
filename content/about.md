@@ -63,7 +63,7 @@ The company name and customer details are confidential.
 - Delivered control-system design, neural-network modelling and CAD assignments.
 
 ### Robotics engineer and research assistant
-**FUM Center of Advanced Rehabilitation and Robotics Research (FUM CARE)** · 2022 to Aug 2024
+**FUM Center of Advanced Rehabilitation and Robotics Research (FUM CARE)** · Feb 2022 to Aug 2024
 
 - Built modular ROS2 software in C++ and Python for exoskeleton sensing, motor control, calibration and real-time assistive torque.
 - Project manager and first author for the FUM-NEXA knee-exoskeleton controller. [Case study](/projects/fuzzy-aan-knee-exoskeleton/)
