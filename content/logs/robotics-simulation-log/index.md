@@ -11,5 +11,3 @@ Today I tested the ROS2 planning stack in Gazebo with a simulated manipulator. T
 - Added a new `lifecycle` node for state management.
 - Logged delay spikes from the joint trajectory action.
 - Verified collision boundaries in the simulator.
-
-This content is part of the Logs section and will not appear in the blog post list.

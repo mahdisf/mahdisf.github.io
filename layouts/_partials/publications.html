@@ -1,0 +1,21 @@
+{{- /* Publication list. Context: dict "items" <data/publications.yaml> "lang" <code>. */}}
+{{- $lang := .lang }}
+<ol class="pub-list" role="list">
+  {{- range $pub := .items }}
+  <li class="pub pub-{{ $pub.kind }}">
+    <p class="pub-status"><span class="chip chip-{{ $pub.kind }}">{{ index $pub.status $lang | default $pub.status.en }}</span>{{ with $pub.year }} <span class="pub-year">{{ . }}</span>{{ end }}</p>
+    <p class="pub-title" lang="en" dir="ltr">{{ $pub.title }}</p>
+    <p class="pub-meta"><span lang="en" dir="ltr">{{ $pub.venue }}</span> · {{ index $pub.role $lang | default $pub.role.en }}</p>
+    {{- if or $pub.url $pub.related }}
+    <p class="pub-links">
+      {{- with $pub.url }}
+      <a class="text-link small" href="{{ . }}" rel="noopener" lang="en" dir="ltr">{{ $pub.linkLabel | default . }}<span class="ext" aria-hidden="true">↗</span></a>
+      {{- end }}
+      {{- with $pub.related }}
+      <a class="text-link small muted" href="{{ partial "func/link.html" . }}" hreflang="en">{{ i18n "pub_related" }}{{ if ne $lang "en" }} <span class="lang-tag">{{ i18n "in_english" }}</span>{{ end }}</a>
+      {{- end }}
+    </p>
+    {{- end }}
+  </li>
+  {{- end }}
+</ol>

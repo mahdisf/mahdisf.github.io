@@ -5,6 +5,9 @@ backend:
   base_url: https://sveltia-cms-auth.mahdi-sarfarazi-99.workers.dev # OAuth proxy — see TODO.md "CMS / Sveltia OAuth" section
   auth_endpoint: api/auth
 
+site_url: https://mahdisf.ir
+display_url: https://mahdisf.ir
+
 # Where uploaded images are stored, and how they are referenced in markdown.
 media_folder: "static/images"
 public_folder: "/images"
@@ -40,34 +43,56 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
   # -------------------------------------------------------------------- Projects
+  # Case studies are written in English only; the Persian site lists them with an
+  # "(English)" label and reads Persian card copy from the `fa` object below.
   - name: "projects"
-    label: "Projects"
-    label_singular: "Project"
+    label: "Work / case studies"
+    label_singular: "Case study"
     folder: "content/projects"
     create: true
-    i18n: true
     slug: "{{slug}}"
     path: "{{slug}}/index"
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Publish Date", name: "date", widget: "datetime", i18n: duplicate }
-      - { label: "Start Date", name: "startDate", widget: "datetime", required: false, i18n: duplicate }
-      - { label: "End Date", name: "endDate", widget: "string", required: false, default: "", i18n: duplicate }
-      - { label: "GitHub URL", name: "github", widget: "string", required: false, default: "", i18n: duplicate }
-      - { label: "Draft", name: "draft", widget: "boolean", default: true, i18n: duplicate }
-      - { label: "Tags", name: "tags", widget: "list", default: ["project"], required: false, i18n: duplicate }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description (SEO)", name: "description", widget: "string", required: false }
+      - { label: "Summary", name: "summary", widget: "text", required: false, default: "" }
+      - { label: "Type", name: "workType", widget: "select", options: ["product", "technical", "research", "other"], default: "technical" }
+      - { label: "Featured on homepage", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "Order (lower first)", name: "weight", widget: "number", value_type: "int", default: 50, required: false }
+      - { label: "Status label", name: "status", widget: "string", required: false }
+      - { label: "Card: problem", name: "problem", widget: "text", required: false }
+      - { label: "Card: my role", name: "role", widget: "text", required: false }
+      - { label: "Card: key decision", name: "work", widget: "text", required: false }
+      - { label: "Card: evidence", name: "evidence", widget: "text", required: false }
+      - { label: "GitHub URL", name: "github", widget: "string", required: false, default: "" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Tags", name: "tags", widget: "list", default: [], required: false }
       - label: "Cover"
         name: "cover"
         widget: "object"
         required: false
-        i18n: true
         fields:
-          - { label: "Image", name: "image", widget: "image", required: false, default: "/images/project-default.svg", i18n: duplicate }
-          - { label: "Caption", name: "caption", widget: "string", required: false, default: "", i18n: true }
-      - { label: "Summary", name: "summary", widget: "text", required: false, default: "", i18n: true }
-      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+          - { label: "Image (file in this folder)", name: "image", widget: "image", required: false }
+          - { label: "Image is in this folder", name: "relative", widget: "boolean", default: true, required: false }
+          - { label: "Alt text", name: "alt", widget: "string", required: false }
+          - { label: "Caption", name: "caption", widget: "string", required: false, default: "" }
+          - { label: "Hide on the case-study page", name: "hiddenInSingle", widget: "boolean", default: false, required: false }
+      - label: "Persian card copy"
+        name: "fa"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Status", name: "status", widget: "string", required: false }
+          - { label: "Summary (other work only)", name: "summary", widget: "text", required: false }
+          - { label: "Problem", name: "problem", widget: "text", required: false }
+          - { label: "My role", name: "role", widget: "text", required: false }
+          - { label: "Key decision", name: "work", widget: "text", required: false }
+          - { label: "Evidence", name: "evidence", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   # ------------------------------------------------------------------------ Logs
   - name: "logs"
@@ -123,6 +148,7 @@ collections:
           - { label: "Title", name: "title", widget: "string", i18n: true }
           - { label: "Description", name: "description", widget: "string", required: false, i18n: true }
           - { label: "Layout", name: "layout", widget: "hidden", default: "now" }
+          - { label: "Last updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
           - { label: "Body", name: "body", widget: "markdown", required: false, i18n: true }
 
       - name: "contact"

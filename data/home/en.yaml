@@ -1,0 +1,92 @@
+# Homepage copy (English). Every claim here must stay consistent with
+# content/about.md and the case studies. Employer and product names are
+# withheld on purpose; do not add them without written employer approval.
+
+hero:
+  name: "Mahdi Sarfarazi"
+  title: "Technical Product Manager for AI and engineering software"
+  lead: "I build AI products for engineers. I start with customer discovery and the MVP scope, then work with engineering, design and QA through delivery and validation."
+  credibility: "Before moving into product, I worked as a robotics and control engineer with ROS2, real-time embedded control, simulation and reinforcement learning."
+  primary:
+    label: "View product work"
+    url: "#work"
+  secondary:
+    label: "Contact Mahdi"
+    url: "contact/"
+  portraitAlt: "Portrait of Mahdi Sarfarazi"
+
+evidence:
+  heading: "What I've done"
+  items:
+    - label: "Current role"
+      title: "Took an AI-assisted control-design platform from concept to a validated MVP"
+      body: "I'm the Technical Product Manager at an agentic-AI startup (name withheld). I led discovery and requirements and worked with a team of seven engineers on delivery. The MVP completed two proof-of-concept cycles and passed the internal readiness gate, and I wrote the go-to-market plan for the next phase."
+      link: "projects/ai-control-design-platform/"
+      linkLabel: "Read the case study"
+    - label: "Independent product"
+      title: "ViGenX: an AI video editor you can inspect before it runs"
+      body: "I defined and built ViGenX, an open-source video editor. It turns a plain-language brief into a workflow you can check and edit, and it waits for your approval before rendering. I showed the first MVP at Diginext's 10th Startup Camp. The current release is pre-1.0."
+      link: "projects/vigenx-agentic-video-editor/"
+      linkLabel: "Read the case study"
+    - label: "Engineering depth"
+      title: "Robotics and control research, in simulation and on hardware"
+      body: "I was first author on a real-time ROS2 controller for a knee exoskeleton (a preprint) and co-authored reinforcement-learning research on quadruped navigation (ICRoM 2025)."
+      link: "projects/fuzzy-aan-knee-exoskeleton/"
+      linkLabel: "See the exoskeleton case"
+
+work:
+  heading: "Selected work"
+  intro: "The product case studies come first. After them is the engineering work my product decisions draw on."
+  allLabel: "All work"
+
+process:
+  heading: "How I work"
+  intro: "Four habits I rely on, each with an example from my own work."
+  steps:
+    - title: "Discover and frame"
+      body: "I start from how the engineer actually works. On the exoskeleton, that showed the real requirement: assistance large enough to outweigh the effort of wearing the device."
+      link: "projects/fuzzy-aan-knee-exoskeleton/#the-problem"
+      linkLabel: "Exoskeleton: the problem"
+    - title: "Scope and decide"
+      body: "In ViGenX I kept the language model away from execution. It plans the edit using only registered blocks, and every run waits for a person to approve it."
+      link: "projects/vigenx-agentic-video-editor/#key-product-decisions"
+      linkLabel: "ViGenX: decisions"
+    - title: "Build with the team"
+      body: "I write user stories with acceptance criteria that the team can build and test against, and I order the backlog by what the next release has to prove."
+      link: "projects/ai-control-design-platform/#key-product-decisions"
+      linkLabel: "Control-design platform: decisions"
+    - title: "Validate and learn"
+      body: "The exoskeleton study also tested the device with its motors off. Wearing it that way raised muscle effort, so the controller had to make up for the device's own burden before it could help."
+      link: "projects/fuzzy-aan-knee-exoskeleton/#results"
+      linkLabel: "Exoskeleton: results"
+
+decision:
+  label: "One decision in detail"
+  question: "Should an LLM edit the video, or plan an edit someone can check?"
+  options:
+    - name: "End-to-end generation"
+      body: "The quickest way to a demo. You can't see what the model decided or repeat the edit reliably, which is a problem for footage with rights obligations."
+      chosen: false
+    - name: "A constrained planner with human approval"
+      body: "It takes more engineering up front. In return, you can see and edit every step before anything renders, and rerun the same workflow later."
+      chosen: true
+  tradeoff: "The cost is that the planner can only use blocks that already exist, so a new capability needs a new block."
+  link: "projects/vigenx-agentic-video-editor/#key-product-decisions"
+  linkLabel: "Read the reasoning"
+  chosenLabel: "Chosen"
+
+research:
+  heading: "Research and publications"
+  intro: "Each item shows its actual status. The preprint has not been peer-reviewed, and the thesis is still in progress."
+  allLabel: "Full list on the About page"
+  allLink: "about/#publications"
+
+writing:
+  heading: "Writing"
+  allLabel: "All writing"
+
+cta:
+  heading: "Hiring a technical PM for an AI, robotics or engineering-software product?"
+  body: "Email is the fastest way to reach me. LinkedIn works too."
+  primary: "Email Mahdi"
+  secondary: "LinkedIn"

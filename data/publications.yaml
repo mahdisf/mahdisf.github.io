@@ -1,0 +1,44 @@
+# Publications, with verified status. Update `status` only from a public record.
+# Checked 2026-09-24: SSRN page marks item 1 as a preprint that "has not been
+# peer reviewed"; IEEE Xplore lists item 3 with DOI. Item 2 has no public
+# proceedings record yet, so it carries no link and no "published" label.
+
+- title: "A Fuzzy Strength Index for Adaptive Assist-as-Needed Control of a Knee Exoskeleton Robot to Enhance Sit-to-Stand Transition"
+  authors: "S. M. Sarfarazi, S. Farhadi, H. Sabzali, M. H. Gheshlaghi, I. Kardan, A. Akbarzadeh"
+  role: { en: "First author", fa: "نویسنده اول" }
+  venue: "SSRN"
+  year: 2026
+  status: { en: "Preprint, not peer-reviewed", fa: "پیش‌انتشار، بدون داوری همتا" }
+  kind: preprint
+  url: "https://doi.org/10.2139/ssrn.6335794"
+  linkLabel: "DOI 10.2139/ssrn.6335794"
+  related: "projects/fuzzy-aan-knee-exoskeleton/"
+
+- title: "Hierarchical Deep Reinforcement Learning for Quadruped Navigation over Complex Terrains"
+  authors: "Y. Ayoubi Rad, S. M. Sarfarazi, M. Shahbazi"
+  role: { en: "Second author", fa: "نویسنده دوم" }
+  venue: "13th RSI International Conference on Robotics and Mechatronics (ICRoM 2025)"
+  year: 2025
+  status: { en: "Conference paper; public proceedings record pending", fa: "مقاله کنفرانسی؛ رکورد عمومی مجموعه مقالات هنوز در دسترس نیست" }
+  kind: conference
+  url: ""
+  related: "projects/quadruped-navigation-hierarchical-rl/"
+
+- title: "Neural Network Extraction of the Crutch–Leg Synergy to Estimate the Intended Motion for Paraplegic Users of Rehabilitation Exoskeletons"
+  authors: "M. M. Pourmand, H. Tamimi, S. M. Sarfarazi, I. Kardan, A. Akbarzadeh"
+  role: { en: "Co-author", fa: "هم‌نویسنده" }
+  venue: "10th RSI International Conference on Robotics and Mechatronics (ICRoM 2022), IEEE"
+  year: 2022
+  status: { en: "Peer-reviewed conference paper", fa: "مقاله کنفرانسی داوری‌شده" }
+  kind: published
+  url: "https://doi.org/10.1109/ICRoM57054.2022.10025061"
+  linkLabel: "IEEE Xplore"
+
+- title: "Risk-aware path planning and control for a quadruped robot under interaction uncertainty"
+  authors: "S. M. Sarfarazi"
+  role: { en: "M.Sc. thesis", fa: "پایان‌نامه کارشناسی ارشد" }
+  venue: "Iran University of Science and Technology"
+  year: ""
+  status: { en: "In progress", fa: "در حال انجام" }
+  kind: thesis
+  url: ""

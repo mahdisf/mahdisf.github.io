@@ -1,65 +1,94 @@
-- id: about_me
-  translation: "درباره من ←"
+- id: cv_link
+  translation: "دانلود رزومه (PDF انگلیسی)"
 
-- id: section_projects
-  translation: "پروژه‌ها و تجربه"
+- id: skip_to_content
+  translation: "رفتن به محتوای اصلی"
 
-- id: section_blog
-  translation: "پست‌های وبلاگ"
+- id: hero_eyebrow
+  translation: "محصولات هوش مصنوعی · رباتیک · سیستم‌های کنترل"
 
-- id: badge_active
-  translation: "فعال"
+- id: loop_need
+  translation: "نیاز مشتری"
+- id: loop_decide
+  translation: "تصمیم"
+- id: loop_build
+  translation: "ساخت"
+- id: loop_outcome
+  translation: "نتیجه"
+- id: loop_validate
+  translation: "اعتبارسنجی"
+- id: loop_caption
+  translation: "کار محصول به شکل یک حلقه کنترلی: هر نسخه با نیاز سنجیده و بعد اصلاح می‌شود."
 
-- id: badge_completed
-  translation: "تکمیل شده"
+- id: worktype_product
+  translation: "مطالعه موردی محصول"
+- id: worktype_technical
+  translation: "مطالعه موردی فنی"
+- id: worktype_research
+  translation: "پژوهش"
+- id: worktype_other
+  translation: "پروژه فنی"
 
-- id: view_all_projects
-  translation: "مشاهده همه پروژه‌ها ←"
+- id: work_problem
+  translation: "مسئله"
+- id: work_role
+  translation: "نقش من"
+- id: work_work
+  translation: "تصمیم اصلی"
+- id: work_evidence
+  translation: "شواهد"
 
-- id: view_all_posts
-  translation: "مشاهده همه پست‌ها ←"
+- id: work_group_product
+  translation: "مطالعات موردی محصول"
+- id: work_group_technical
+  translation: "مطالعات موردی فنی و پژوهشی"
+- id: work_group_other
+  translation: "دیگر کارهای فنی"
 
-- id: view_all_logs
-  translation: "مشاهده همه لاگ‌ها ←"
-
-- id: now_page_link
-  translation: "صفحه الان"
-
-- id: now_last_updated
-  translation: "آخرین به‌روزرسانی در"
+- id: read_case
+  translation: "خواندن مطالعه موردی"
+- id: in_english
+  translation: "(انگلیسی)"
+- id: repo_link
+  translation: "مخزن کد"
+- id: pub_related
+  translation: "مطالعه موردی مرتبط"
 
 - id: footer_nav_heading
   translation: "ناوبری"
+- id: footer_contact_heading
+  translation: "ارتباط با من"
+- id: footer_contact_desc
+  translation: "مدیریت محصول فنی برای هوش مصنوعی، رباتیک و نرم‌افزار مهندسی. ایمیل سریع‌ترین راه ارتباط با من است."
+- id: footer_contact_cta
+  translation: "ایمیل به من"
+- id: newsletter_cta
+  translation: "خبرنامه در Substack"
 
+- id: now_intro
+  translation: "این <a href=\"https://nownownow.com/about\" rel=\"noopener\">صفحه «الان»</a> من است؛ چیزهایی که در این دوره از زندگی‌ام روی آن‌ها تمرکز دارم."
+- id: now_cadence
+  translation: "هر سه ماه یک بار به‌روزش می‌کنم."
+- id: now_stale
+  translation: "از این به‌روزرسانی بیش از سه ماه گذشته است و ممکن است بخشی از آن تغییر کرده باشد."
+- id: now_last_updated
+  translation: "آخرین به‌روزرسانی:"
+- id: view_all_logs
+  translation: "به‌روزرسانی‌های قبلی"
 - id: no_log_entries
   translation: "هنوز هیچ لاگی وجود ندارد."
 
 - id: related_posts
-  translation: "پست‌های مرتبط"
+  translation: "مطالب مرتبط"
 
 - id: 404_title
   translation: "صفحه پیدا نشد"
-
 - id: 404_desc
   translation: "صفحه‌ای که دنبالش هستید وجود ندارد یا جابجا شده است."
-
 - id: 404_go_home
   translation: "رفتن به خانه →"
-
 - id: 404_search
   translation: "جستجو در سایت"
-
-- id: newsletter_heading
-  translation: "در جریان باشید"
-
-- id: newsletter_desc
-  translation: "در Substack مشترک شوید تا پست‌های جدید به ایمیلتان برسد."
-
-- id: newsletter_cta
-  translation: "عضویت در Substack →"
-
-- id: cv_download
-  translation: "دانلود رزومه"
 
 - id: project_present
   translation: "تاکنون"
@@ -69,12 +98,10 @@
 
 - id: copy_link_title
   translation: "کپی لینک این صفحه"
-
 - id: copy_link_copied
   translation: "کپی شد!"
 
 - id: code_copy
   translation: "کپی"
-
 - id: code_copied
   translation: "کپی شد!"

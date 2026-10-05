@@ -1,6 +1,5 @@
-baseURL: "https://mahdisf.github.io"
+baseURL: "https://mahdisf.ir"
 title: "Mahdi Sarfarazi"
-copyright: "©2026 - Mahdi Sarfarazi"
 
 theme: ["PaperMod"]
 
@@ -9,70 +8,61 @@ defaultContentLanguageInSubdir: false
 languages:
   en:
     label: "English"
+    locale: "en-US"
     weight: 1
     menu:
       main:
+        - name: Work
+          url: projects/
+          weight: 1
         - name: About
           url: about/
-          weight: 1
-        - name: Now
-          url: now/
           weight: 2
-        - name: Projects
-          url: projects/
-          weight: 4
-        - name: Blog
+        - name: Writing
           url: posts/
           weight: 3
-        - name: Logs
-          url: logs/
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 6
         - name: Contact
           url: contact/
-          weight: 7
+          weight: 4
+      footer:
+        - name: Now
+          url: now/
+          weight: 1
+        - name: Search
+          url: search/
+          weight: 3
   fa:
-    label: "Farsi"
+    label: "فارسی"
     locale: "fa-IR"
     direction: rtl
     title: "مهدی سرفرازی"
     weight: 2
     menu:
       main:
+        - name: نمونه‌کارها
+          url: projects/
+          weight: 1
         - name: درباره
           url: about/
-          weight: 1
-        - name: الان
-          url: now/
           weight: 2
-        - name: پروژه‌ها
-          url: projects/
-          weight: 3
-        - name: بلاگ
+        - name: نوشته‌ها
           url: posts/
-          weight: 4
-        - name: لاگ
-          url: logs/
-          weight: 5
-        - name: جستجو
-          url: search/
-          weight: 6
+          weight: 3
         - name: تماس
           url: contact/
-          weight: 7
+          weight: 4
+      footer:
+        - name: الان
+          url: now/
+          weight: 1
+        - name: جستجو
+          url: search/
+          weight: 3
     params:
       languageAltTitle: "فارسی"
-      description: "وب‌سایت شخصی و وبلاگ فنی مهدی سرفرازی، مهندس نرم‌افزار رباتیک و مدیر محصول فنی در حوزه ROS2، خودمختاری ربات‌ها، شبیه‌سازی، کنترل و محصولات هوش مصنوعی."
+      description: "مهدی سرفرازی، مدیر محصول فنی برای محصولات هوش مصنوعی و نرم‌افزارهای مهندسی، با پیشینه عمیق در رباتیک، ROS2 و سیستم‌های کنترل."
       label:
         text: "مهدی سرفرازی"
-      homeInfoParams:
-        Title: "سلام، من مهدی هستم"
-        Content: |
-          مهندس نرم‌افزار رباتیک و مدیر محصول فنی؛ سازنده سامانه‌های خودمختار و محصولات مهندسی مبتنی بر هوش مصنوعی.
-
-          با ROS2، Python و C++ سامانه‌های رباتیک را از شبیه‌سازی تا سخت‌افزار توسعه می‌دهم و با کشف مشتری، تعریف نیازمندی، اولویت‌بندی و هدایت تیم‌های چندتخصصی، ایده‌های فنی را به MVP تبدیل می‌کنم. اینجا درباره نرم‌افزار رباتیک، کنترل، هوش مصنوعی و مدیریت محصول فنی می‌نویسم.
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -81,7 +71,6 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts"]
 
 minify:
   disableXML: true
@@ -134,12 +123,14 @@ params:
   env: production
   title: "Mahdi Sarfarazi"
   displayFullLangName: true
-  description: "Personal website and technical blog of Mahdi Sarfarazi, a robotics software engineer and technical product manager working on ROS2, robot autonomy, simulation, control, and AI products."
-  keywords: ["robotics software engineer", "technical product manager", "robotics", "AI", "ROS2", "reinforcement learning", "robot control", "Isaac Gym", "Gazebo"]
+  description: "Mahdi Sarfarazi is a technical product manager for AI and engineering software, with deep hands-on experience in robotics, ROS2 and control systems."
+  keywords: ["technical product manager", "AI product manager", "engineering software", "robotics", "control systems", "ROS2", "product management", "MVP"]
   author: "Mahdi Sarfarazi"
+  jobTitle: "Technical Product Manager"
   DateFormat: "January 2, 2006"
 
-  mainSections: ["logs"]
+  # Sections whose pages count as "writing". Logs and projects are deliberately excluded.
+  mainSections: ["posts"]
 
   defaultTheme: auto
   ShowShareButtons: true
@@ -151,44 +142,42 @@ params:
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
-  ShowWordCount: true
+  ShowWordCount: false
   hideFooter: false
 
-  images: ["images/papermod-cover.png"]
+  # Default social preview image (1200x630). Pages with a cover image use their own.
+  images: ["images/social-card.png"]
 
   label:
     text: "Mahdi Sarfarazi"
     icon: "images/logo.svg"
     iconHeight: 30
 
-
-
-  homeInfoParams:
-    Title: "Hi, I'm Mahdi"
-    Content: |
-      Robotics software engineer and technical product manager building autonomous systems and AI-assisted engineering products.
-
-      I develop ROS2 systems in Python and C++ from simulation to hardware, then use customer discovery, requirements, prioritization, and cross-functional delivery to turn technical ideas into MVPs. I write here about robotics software, control, AI, and technical product management.
-
   profileImage: "images/profile.jpg"
+  avatarImage: "images/profile-avatar.jpg"   # 144px copy for the homepage hero
 
   socialIcons:
+    - name: linkedin
+      title: LinkedIn
+      url: "https://www.linkedin.com/in/sarfarazi"
     - name: github
       title: GitHub
       url: "https://github.com/mahdisf"
-    - name: linkedin
-      title: LinkedIn
-      url: "https://linkedin.com/in/sarfarazi"
     - name: email
       title: Email
       url: "mailto:Mahdi_Sarfarazi@outlook.com"
 
-  social:
-    twitter: "@yourtwitterhandle"
+  contactEmail: "Mahdi_Sarfarazi@outlook.com"
+  linkedin: "https://www.linkedin.com/in/sarfarazi"
+  github: "https://github.com/mahdisf"
 
   schema:
     publisherType: "Person"
+    sameAs:
+      - "https://www.linkedin.com/in/sarfarazi"
+      - "https://github.com/mahdisf"
 
+  # Giscus comments render on writing (posts) only; see layouts/_partials/comments.html.
   comments: true
   ShowFullTextinRSS: true
 
@@ -198,6 +187,8 @@ params:
     favicon16x16: "images/logo.svg"
     favicon32x32: "images/logo.svg"
     apple_touch_icon: "images/logo.svg"
+    safari_pinned_tab: "images/logo.svg"
+    theme_color: "#002D62"
 
 markup:
   goldmark:

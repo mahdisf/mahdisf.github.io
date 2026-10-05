@@ -1,165 +1,129 @@
 {{- define "main" }}
+{{- $lang := site.Language.Lang }}
+{{- $d := index hugo.Data.home $lang | default hugo.Data.home.en }}
 
-{{- if and .IsHome site.Params.homeInfoParams }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
-{{/* ── Projects & Experience ── */}}
+{{- /* Case studies live in the English site; other languages fall back to them. */}}
 {{- $projects := where site.RegularPages "Section" "projects" }}
+{{- $fallback := false }}
 {{- if not $projects }}
   {{- range hugo.Sites }}
     {{- if eq .Language.Lang "en" }}
       {{- $projects = where .RegularPages "Section" "projects" }}
+      {{- $fallback = true }}
     {{- end }}
   {{- end }}
 {{- end }}
-{{- if $projects }}
-<section class="home-section" id="projects">
-    <h2 class="section-heading">
-        <a href="{{ "projects/" | absLangURL }}">{{ i18n "section_projects" | default "Projects & Experience" }}</a>
-    </h2>
-    <div class="projects-home-grid">
 
-        {{/* Current projects first, then past — cap at 3 total */}}
-        {{- $count := 0 }}
-        {{- range $projects.ByPublishDate.Reverse }}
-        {{- if lt $count 3 }}
-        {{- $isCurrent := true }}
-        {{- with .Params.endDate }}{{- if lt . now }}{{- $isCurrent = false }}{{- end }}{{- end }}
-        {{- if $isCurrent }}
-        <article class="project-home-card project-current">
-            <a href="{{ .Permalink }}" class="project-home-link">
-                <div class="project-home-img">
-                    {{- $img := or .Params.cover.image .Params.image .Params.featured }}
-                    {{- if $img }}
-                    <img src="{{ $img | absURL }}" alt="{{ .Title | plainify }}" loading="lazy">
-                    {{- else }}
-                    <div class="project-no-img"></div>
-                    {{- end }}
-                </div>
-                <div class="project-home-body">
-                    <div class="project-home-header">
-                        <h3 class="project-home-title">{{ .Title }}</h3>
-                        <span class="project-badge project-badge-active">{{ i18n "badge_active" | default "Active" }}</span>
-                    </div>
-                    {{- with .Params.startDate }}
-                    <div class="project-dates">{{ . | dateFormat "Jan 2006" }} – {{ i18n "project_present" | default "Present" }}</div>
-                    {{- end }}
-                    {{- with .Summary }}
-                    <p class="project-home-summary">{{ . | plainify }}</p>
-                    {{- end }}
-                </div>
-            </a>
-            {{- with .Params.github }}
-            <div class="project-home-footer">
-                <a href="{{ . }}" class="project-github-btn" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                    GitHub
-                </a>
-            </div>
-            {{- end }}
-        </article>
-        {{- $count = add $count 1 }}
-        {{- end }}
-        {{- end }}
-        {{- end }}
+{{- partial "home/hero.html" (dict "d" $d.hero "page" .) }}
 
-        {{- range $projects.ByPublishDate.Reverse }}
-        {{- if lt $count 3 }}
-        {{- $isCurrent := true }}
-        {{- with .Params.endDate }}{{- if lt . now }}{{- $isCurrent = false }}{{- end }}{{- end }}
-        {{- if not $isCurrent }}
-        <article class="project-home-card project-past">
-            <a href="{{ .Permalink }}" class="project-home-link">
-                <div class="project-home-img">
-                    {{- $img := or .Params.cover.image .Params.image .Params.featured }}
-                    {{- if $img }}
-                    <img src="{{ $img | absURL }}" alt="{{ .Title | plainify }}" loading="lazy">
-                    {{- else }}
-                    <div class="project-no-img"></div>
-                    {{- end }}
-                </div>
-                <div class="project-home-body">
-                    <div class="project-home-header">
-                        <h3 class="project-home-title">{{ .Title }}</h3>
-                        <span class="project-badge project-badge-past">{{ i18n "badge_completed" | default "Completed" }}</span>
-                    </div>
-                    {{- if or .Params.startDate .Params.endDate }}
-                    <div class="project-dates">
-                        {{- if .Params.startDate }}{{ .Params.startDate | dateFormat "Jan 2006" }}{{- end }}
-                        {{- if and .Params.startDate .Params.endDate }} – {{ end }}
-                        {{- if .Params.endDate }}{{ .Params.endDate | dateFormat "Jan 2006" }}{{- end }}
-                    </div>
-                    {{- end }}
-                    {{- with .Summary }}
-                    <p class="project-home-summary">{{ . | plainify }}</p>
-                    {{- end }}
-                </div>
-            </a>
-            {{- with .Params.github }}
-            <div class="project-home-footer">
-                <a href="{{ . }}" class="project-github-btn" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                    GitHub
-                </a>
-            </div>
-            {{- end }}
-        </article>
-        {{- $count = add $count 1 }}
-        {{- end }}
-        {{- end }}
-        {{- end }}
-
-    </div>
-    <div class="section-more">
-        <a href="{{ "projects/" | absLangURL }}" class="more-btn">{{ i18n "view_all_projects" | default "View all projects →" }}</a>
-    </div>
+{{- with $d.evidence }}
+<section class="home-band evidence" aria-labelledby="evidence-heading">
+  <h2 id="evidence-heading" class="band-heading visually-hidden">{{ .heading }}</h2>
+  <ol class="evidence-grid" role="list">
+    {{- range .items }}
+    <li class="evidence-item">
+      <p class="eyebrow">{{ .label }}</p>
+      <h3 class="evidence-title">{{ .title }}</h3>
+      <p class="evidence-body">{{ .body }}</p>
+      <a class="text-link" href="{{ partial "func/link.html" .link }}">{{ .linkLabel }}<span class="arrow" aria-hidden="true"></span></a>
+    </li>
+    {{- end }}
+  </ol>
 </section>
 {{- end }}
 
-{{/* ── Blog Posts ── */}}
-{{- $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $posts = where $posts "Params.hiddenInHomeList" "!=" "true" }}
-{{- if not $posts }}
-  {{- range hugo.Sites }}
-    {{- if eq .Language.Lang "en" }}
-      {{- $enPosts := where .RegularPages "Type" "in" site.Params.mainSections }}
-      {{- $posts = where $enPosts "Params.hiddenInHomeList" "!=" "true" }}
+{{- $featured := (where $projects "Params.featured" true).ByWeight }}
+{{- if $featured }}
+<section class="home-band" id="work" aria-labelledby="work-heading">
+  <div class="band-head">
+    <h2 id="work-heading" class="band-heading">{{ $d.work.heading }}</h2>
+    <p class="band-intro">{{ $d.work.intro }}</p>
+  </div>
+  <div class="work-grid">
+    {{- range first 3 $featured }}
+    {{- partial "work_card.html" (dict "page" . "lang" $lang "fallback" $fallback) }}
     {{- end }}
-  {{- end }}
+  </div>
+  <p class="band-more"><a class="text-link" href="{{ partial "func/link.html" "projects/" }}">{{ $d.work.allLabel }}<span class="arrow" aria-hidden="true"></span></a></p>
+</section>
 {{- end }}
-{{- if $posts }}
-<section class="home-section" id="blog">
-    <h2 class="section-heading">
-        <a href="{{ "posts/" | absLangURL }}">{{ i18n "section_blog" | default "Blog Posts" }}</a>
-    </h2>
-    <div class="posts-home-list">
-        {{- range first 3 ($posts.ByPublishDate.Reverse) }}
-        <article class="post-home-entry">
-            {{- $img := or .Params.cover.image .Params.image .Params.featured }}
-            {{- if $img }}
-            <div class="post-home-img">
-                <img src="{{ $img | absURL }}" alt="{{ .Title | plainify }}" loading="lazy">
-            </div>
-            {{- end }}
-            <div class="post-home-body">
-                <header>
-                    <h3 class="post-home-title">{{ .Title }}</h3>
-                </header>
-                {{- if not (.Param "hideMeta") }}
-                <div class="post-home-meta">{{- partial "post_meta.html" . }}</div>
-                {{- end }}
-                {{- if not (.Param "hideSummary") }}
-                <p class="post-home-summary">{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-                {{- end }}
-            </div>
-            <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
-        </article>
-        {{- end }}
-    </div>
-    <div class="section-more">
-        <a href="{{ "posts/" | absLangURL }}" class="more-btn">{{ i18n "view_all_posts" | default "View all posts →" }}</a>
-    </div>
+
+{{- with $d.process }}
+<section class="home-band" id="process" aria-labelledby="process-heading">
+  <div class="band-head">
+    <h2 id="process-heading" class="band-heading">{{ .heading }}</h2>
+    <p class="band-intro">{{ .intro }}</p>
+  </div>
+  <ol class="process-steps" role="list">
+    {{- range $i, $s := .steps }}
+    <li class="process-step">
+      <span class="step-num" aria-hidden="true">{{ add $i 1 }}</span>
+      <h3 class="step-title">{{ $s.title }}</h3>
+      <p class="step-body">{{ $s.body }}</p>
+      <a class="text-link small" href="{{ partial "func/link.html" $s.link }}">{{ $s.linkLabel }}<span class="arrow" aria-hidden="true"></span></a>
+    </li>
+    {{- end }}
+  </ol>
+
+  {{- with $d.decision }}
+  <aside class="decision" aria-labelledby="decision-q">
+    <p class="eyebrow">{{ .label }}</p>
+    <h3 id="decision-q" class="decision-q">{{ .question }}</h3>
+    <ul class="decision-options" role="list">
+      {{- range .options }}
+      <li class="decision-option{{ if .chosen }} is-chosen{{ end }}">
+        <p class="option-name">{{ .name }}{{ if .chosen }} <span class="chip chip-accent">{{ $d.decision.chosenLabel }}</span>{{ end }}</p>
+        <p class="option-body">{{ .body }}</p>
+      </li>
+      {{- end }}
+    </ul>
+    <p class="decision-tradeoff">{{ .tradeoff }}</p>
+    <a class="text-link small" href="{{ partial "func/link.html" .link }}">{{ .linkLabel }}<span class="arrow" aria-hidden="true"></span></a>
+  </aside>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- with hugo.Data.publications }}
+<section class="home-band" id="research" aria-labelledby="research-heading">
+  <div class="band-head">
+    <h2 id="research-heading" class="band-heading">{{ $d.research.heading }}</h2>
+    <p class="band-intro">{{ $d.research.intro }}</p>
+  </div>
+  {{- partial "publications.html" (dict "items" . "lang" $lang) }}
+  <p class="band-more"><a class="text-link" href="{{ partial "func/link.html" $d.research.allLink }}">{{ $d.research.allLabel }}<span class="arrow" aria-hidden="true"></span></a></p>
+</section>
+{{- end }}
+
+{{- /* Only posts explicitly marked `featured: true` appear here, so the homepage never
+       promotes placeholder writing. The section disappears when there are none. */}}
+{{- $posts := where (where site.RegularPages "Section" "in" site.Params.mainSections) "Params.featured" true }}
+{{- with first 3 $posts.ByPublishDate.Reverse }}
+<section class="home-band" id="writing" aria-labelledby="writing-heading">
+  <div class="band-head">
+    <h2 id="writing-heading" class="band-heading">{{ $d.writing.heading }}</h2>
+  </div>
+  <ul class="writing-list" role="list">
+    {{- range . }}
+    <li class="writing-item">
+      <a href="{{ .Permalink }}" class="writing-link">{{ .Title }}</a>
+      <p class="writing-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></p>
+      {{- with .Description }}<p class="writing-summary">{{ . }}</p>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+  <p class="band-more"><a class="text-link" href="{{ partial "func/link.html" "posts/" }}">{{ $d.writing.allLabel }}<span class="arrow" aria-hidden="true"></span></a></p>
+</section>
+{{- end }}
+
+{{- with $d.cta }}
+<section class="home-cta" aria-labelledby="cta-heading">
+  <h2 id="cta-heading" class="cta-heading">{{ .heading }}</h2>
+  <p class="cta-body">{{ .body }}</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="mailto:{{ site.Params.contactEmail }}">{{ .primary }}</a>
+    <a class="btn btn-secondary" href="{{ site.Params.linkedin }}" rel="noopener">{{ .secondary }}</a>
+  </div>
 </section>
 {{- end }}
 

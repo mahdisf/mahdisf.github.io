@@ -1,4 +1,4 @@
 ---
-title: "Blog"
-description: "Technical notes on robotics software, AI systems, simulation, and robot control."
+title: "Writing"
+description: "Notes on technical product management, AI engineering workflows and robotics."
 ---

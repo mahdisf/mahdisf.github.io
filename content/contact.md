@@ -1,16 +1,19 @@
 ---
 title: "Contact"
-description: "Contact information for Mahdi Sarfarazi."
+seoTitle: "Contact Mahdi Sarfarazi | Technical Product Manager"
+description: "How to reach Mahdi Sarfarazi about technical product management for AI, robotics and engineering-software products."
 author: ["Mahdi Sarfarazi"]
 draft: false
 disableShare: true
 ShowBreadcrumbs: false
+comments: false
+hideMeta: true
 ---
 
-For robotics software, autonomous-systems research, or technical product opportunities, the best way to reach me is by email.
+I work on technical product management for AI and engineering software, especially products for robotics, autonomous systems, control engineering and developer tools. If that's what you're building or hiring for, email is the fastest way to reach me.
 
-- Email: [Mahdi_Sarfarazi@outlook.com](mailto:Mahdi_Sarfarazi@outlook.com)
-- LinkedIn: [linkedin.com/in/sarfarazi](https://linkedin.com/in/sarfarazi)
-- GitHub: [github.com/mahdisf](https://github.com/mahdisf)
+<p class="contact-cta"><a class="btn btn-primary" href="mailto:Mahdi_Sarfarazi@outlook.com">Email Mahdi_Sarfarazi@outlook.com</a></p>
 
-I am especially interested in work that combines robotics software and product ownership: ROS2 systems, simulation-to-hardware workflows, robot learning and control, AI-assisted engineering products, and technical product management for robotics or autonomous systems.
+You can also find me on [LinkedIn](https://www.linkedin.com/in/sarfarazi) and see my open-source work on [GitHub](https://github.com/mahdisf).
+
+My one-page CV is here: [download the PDF](/cv.pdf).

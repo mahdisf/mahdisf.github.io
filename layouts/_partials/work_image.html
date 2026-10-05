@@ -1,0 +1,21 @@
+{{- /* Card image for a work page. Context: dict "page" "width" "height".
+       Raster covers stored in the page bundle are cropped to the card ratio at build
+       time; SVG diagrams and absolute paths are used as-is. */}}
+{{- $p := .page }}
+{{- $w := .width | default 960 }}
+{{- $h := .height | default 540 }}
+{{- with $p.Params.cover.image }}
+  {{- $alt := $p.Params.cover.alt | default $p.Params.cover.caption | default $p.Title }}
+  {{- $res := $p.Resources.GetMatch (path.Base .) }}
+  {{- if and $res (in (slice "jpeg" "png") $res.MediaType.SubType) }}
+    {{- $img := $res.Fill (printf "%dx%d Center jpg q78" $w $h) }}
+    {{- $small := $res.Fill (printf "%dx%d Center jpg q75" (div $w 2) (div $h 2)) }}
+    <img src="{{ $img.RelPermalink }}" srcset="{{ $small.RelPermalink }} {{ $small.Width }}w, {{ $img.RelPermalink }} {{ $img.Width }}w" sizes="(max-width: 640px) calc(100vw - 48px), 360px" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- else if $res }}
+    <img src="{{ $res.RelPermalink }}" width="{{ $w }}" height="{{ $h }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- else }}
+    <img src="{{ . | absURL }}" width="{{ $w }}" height="{{ $h }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- end }}
+{{- else }}
+  <div class="work-media-empty" aria-hidden="true"></div>
+{{- end }}

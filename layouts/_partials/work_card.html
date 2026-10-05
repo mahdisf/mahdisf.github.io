@@ -1,0 +1,40 @@
+{{- /* Work card. Context: dict "page" <Page> "lang" <code> "fallback" <bool: rendering an
+       English page inside another language> "headingLevel" <optional "h2"|"h3">.
+       Card copy comes from front matter: role, stage, problem, work, evidence, status.
+       A `fa:` map in front matter overrides these for the Persian site. */}}
+{{- $p := .page }}
+{{- $lang := .lang }}
+{{- $h := .headingLevel | default "h3" }}
+{{- $c := $p.Params }}
+{{- $loc := dict }}
+{{- with index $p.Params $lang }}{{ if reflect.IsMap . }}{{ $loc = . }}{{ end }}{{ end }}
+{{- $title := $loc.title | default $p.Title }}
+{{- $status := $loc.status | default $c.status }}
+{{- $rows := slice
+    (dict "k" "work_problem" "v" ($loc.problem | default $c.problem))
+    (dict "k" "work_role" "v" ($loc.role | default $c.role))
+    (dict "k" "work_work" "v" ($loc.work | default $c.work))
+    (dict "k" "work_evidence" "v" ($loc.evidence | default $c.evidence)) }}
+<article class="work-card work-{{ $c.workType | default "technical" }}">
+  <div class="work-media">
+    {{- partial "work_image.html" (dict "page" $p "width" 960 "height" 540) }}
+  </div>
+  <div class="work-body">
+    <p class="work-meta">
+      <span class="chip">{{ i18n (printf "worktype_%s" ($c.workType | default "technical")) }}</span>
+      {{- with $status }}<span class="chip chip-status">{{ . }}</span>{{ end }}
+    </p>
+    {{ printf "<%s class=\"work-title\">" $h | safeHTML }}<a href="{{ $p.Permalink }}"{{ if .fallback }} hreflang="en"{{ end }}>{{ $title }}</a>{{ printf "</%s>" $h | safeHTML }}
+    <dl class="work-facts">
+      {{- range $r := $rows }}{{ with $r.v }}
+      <div class="work-fact"><dt>{{ i18n $r.k }}</dt><dd>{{ . }}</dd></div>
+      {{- end }}{{ end }}
+    </dl>
+    <p class="work-actions">
+      <a class="text-link" href="{{ $p.Permalink }}"{{ if .fallback }} hreflang="en"{{ end }}>{{ i18n "read_case" }}{{ if .fallback }} <span class="lang-tag">{{ i18n "in_english" }}</span>{{ end }}<span class="arrow" aria-hidden="true"></span></a>
+      {{- with $c.github }}
+      <a class="text-link muted" href="{{ . }}" rel="noopener">{{ i18n "repo_link" }}<span class="ext" aria-hidden="true">↗</span></a>
+      {{- end }}
+    </p>
+  </div>
+</article>

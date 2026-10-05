@@ -5,7 +5,7 @@
         <div class="footer-brand">
             <a href="{{ "" | absLangURL }}" class="footer-brand-link">
                 {{- with site.Params.label.icon }}
-                <img src="{{ . | absURL }}" alt="{{ site.Title }}" height="{{ site.Params.label.iconHeight | default 32 }}">
+                <img src="{{ . | absURL }}" alt="" height="{{ site.Params.label.iconHeight | default 32 }}" width="{{ mul (site.Params.label.iconHeight | default 32) 1.2 }}">
                 {{- end }}
                 <span>{{ site.Params.label.text | default site.Title }}</span>
             </a>
@@ -15,35 +15,34 @@
             </div>
         </div>
 
-        <div class="footer-nav">
-            <h4 class="footer-heading">{{ i18n "footer_nav_heading" | default "Navigation" }}</h4>
+        <nav class="footer-nav" aria-label="{{ i18n "footer_nav_heading" }}">
+            <h2 class="footer-heading">{{ i18n "footer_nav_heading" | default "Navigation" }}</h2>
             <ul class="footer-links">
                 {{- range site.Menus.main }}
                 <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
                 {{- end }}
+                {{- range site.Menus.footer }}
+                <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+                {{- end }}
             </ul>
-        </div>
+        </nav>
 
-        <div class="footer-newsletter">
-            <h4 class="footer-heading">{{ i18n "newsletter_heading" | default "Stay in the Loop" }}</h4>
-            <p class="footer-newsletter-desc">{{ i18n "newsletter_desc" | default "Subscribe on Substack to get new posts delivered to your inbox." }}</p>
-            <a href="https://mahdisarfarazi.substack.com/subscribe" class="substack-btn" target="_blank" rel="noopener noreferrer">
-                {{ i18n "newsletter_cta" | default "Subscribe on Substack →" }}
-            </a>
+        <div class="footer-contact">
+            <h2 class="footer-heading">{{ i18n "footer_contact_heading" }}</h2>
+            <p class="footer-contact-desc">{{ i18n "footer_contact_desc" }}</p>
+            <a href="mailto:{{ site.Params.contactEmail }}" class="btn btn-primary btn-small">{{ i18n "footer_contact_cta" }}</a>
+            <p class="footer-newsletter"><a href="https://mahdisarfarazi.substack.com/subscribe" rel="noopener">{{ i18n "newsletter_cta" }}</a></p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        {{- if site.Copyright }}
-        <span>{{ site.Copyright | markdownify }}</span>
-        {{- else }}
-        <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
-        {{- end }}
+        {{- /* Year comes from the build date, so it stays current with each quarterly update. */}}
+        <span>&copy; {{ now.Year }} {{ site.Params.author }}</span>
         <span class="footer-powered">
             {{ i18n "footer_built_with" | default "Built with" }}
-            <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &amp;
-            <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+            <a href="https://gohugo.io/" rel="noopener">Hugo</a> &amp;
+            <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener">PaperMod</a>
         </span>
     </div>
 </footer>
@@ -77,12 +76,17 @@
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
+            var target = document.querySelector(`[id='${decodeURIComponent(id)}']`);
+            if (!target) return;
             if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
+                target.scrollIntoView({ behavior: "smooth" });
             } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+                target.scrollIntoView();
+            }
+            // Move keyboard focus with the scroll so skip links and in-page CTAs work.
+            if (id !== "top") {
+                if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+                target.focus({ preventScroll: true });
             }
             if (id === "top") {
                 history.replaceState(null, null, " ");

@@ -16,13 +16,14 @@
     {{- partial "head.html" . }}
 </head>
 
-{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
-<body class="list" id="top">
-{{- else }}
-<body id="top">
-{{- end }}
+{{- $bodyClass := slice }}
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}{{ $bodyClass = $bodyClass | append "list" }}{{ end }}
+{{- if .IsHome }}{{ $bodyClass = $bodyClass | append "home" }}{{ end }}
+{{- if eq .Section "projects" }}{{ $bodyClass = $bodyClass | append "section-projects" }}{{ end }}
+<body{{ with $bodyClass }} class="{{ delimit . " " }}"{{ end }} id="top">
+    <a class="skip-link" href="#main-content">{{ i18n "skip_to_content" }}</a>
     {{ partialCached "header.html" . .Page -}}
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         {{- block "main" . }}{{ end }}
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") site.Language.Lang -}}

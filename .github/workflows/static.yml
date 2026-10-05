@@ -34,7 +34,10 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          # Pinned so a new Hugo release can't break a build months after the last update.
+          # Change deliberately, after testing locally with the same version.
+          hugo-version: '0.161.0'
+          extended: true
       - name: Build site
         run: hugo --minify
       - name: Setup Pages

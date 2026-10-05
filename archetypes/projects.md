@@ -1,14 +1,25 @@
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
-startDate: {{ .Date }}
-endDate: ""
 draft: true
-tags: ["project"]
-cover:
-  image: "/images/project-default.svg"
-  caption: ""
+description: ""
 summary: ""
+workType: technical   # product | technical | research | other
+featured: false
+weight: 50
+status: ""
+problem: ""
+role: ""
+work: ""
+evidence: ""
+github: ""
+tags: []
+cover:
+  image: ""
+  relative: true
+  alt: ""
+  hiddenInSingle: true
+comments: false
 ---
 
-Project description goes here.
+Start with a one-sentence outcome and the stage the work reached, then: context and problem, my role, decisions and trade-offs, evidence (with sample, comparator and limits) and what's next.

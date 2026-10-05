@@ -1,0 +1,24 @@
+{{- /* Resolve a site-relative link ("about/#experience", "projects/x/") to the page in
+       the current language, falling back to the English page when no translation
+       exists. Fragments and in-page anchors are preserved. Returns a URL string. */}}
+{{- $u := . }}
+{{- $out := "" }}
+{{- if or (hasPrefix $u "#") (hasPrefix $u "mailto:") (strings.Contains $u "://") }}
+  {{- $out = $u }}
+{{- else }}
+  {{- $parts := split $u "#" }}
+  {{- $path := printf "/%s" (strings.Trim (index $parts 0) "/") }}
+  {{- $frag := "" }}
+  {{- if gt (len $parts) 1 }}{{ $frag = printf "#%s" (index $parts 1) }}{{ end }}
+  {{- with site.GetPage $path }}
+    {{- $out = printf "%s%s" .RelPermalink $frag }}
+  {{- else }}
+    {{- range hugo.Sites }}
+      {{- if eq .Language.Lang "en" }}
+        {{- with .GetPage $path }}{{ $out = printf "%s%s" .RelPermalink $frag }}{{ end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+  {{- if not $out }}{{ $out = $u | relLangURL }}{{ end }}
+{{- end }}
+{{- return $out }}

@@ -23,7 +23,3 @@ Exploring diffusion-based robot policies and vision-language-action (VLA) models
 ### Side Project
 
 Building a small robotics simulation benchmark for evaluating LLM planners across a variety of household manipulation tasks — dishes, drawers, object sorting. Planning to release it as open source.
-
-### Location
-
-Currently based in Tehran, Iran. Open to remote research collaborations and freelance robotics engineering work.

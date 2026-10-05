@@ -1,65 +1,94 @@
-- id: about_me
-  translation: "About me →"
+- id: cv_link
+  translation: "Download CV (PDF)"
 
-- id: section_projects
-  translation: "Projects & Experience"
+- id: skip_to_content
+  translation: "Skip to content"
 
-- id: section_blog
-  translation: "Blog Posts"
+- id: hero_eyebrow
+  translation: "AI products · Robotics · Control systems"
 
-- id: badge_active
-  translation: "Active"
+- id: loop_need
+  translation: "Customer need"
+- id: loop_decide
+  translation: "Decide"
+- id: loop_build
+  translation: "Build"
+- id: loop_outcome
+  translation: "Outcome"
+- id: loop_validate
+  translation: "Validate"
+- id: loop_caption
+  translation: "Product work drawn as a control loop: each build is checked against the need, then corrected."
 
-- id: badge_completed
-  translation: "Completed"
+- id: worktype_product
+  translation: "Product case study"
+- id: worktype_technical
+  translation: "Technical case study"
+- id: worktype_research
+  translation: "Research"
+- id: worktype_other
+  translation: "Technical project"
 
-- id: view_all_projects
-  translation: "View all projects →"
+- id: work_problem
+  translation: "Problem"
+- id: work_role
+  translation: "My role"
+- id: work_work
+  translation: "Main decision"
+- id: work_evidence
+  translation: "Evidence"
 
-- id: view_all_posts
-  translation: "View all posts →"
+- id: work_group_product
+  translation: "Product case studies"
+- id: work_group_technical
+  translation: "Technical and research case studies"
+- id: work_group_other
+  translation: "Other technical work"
 
-- id: view_all_logs
-  translation: "View all logs →"
-
-- id: now_page_link
-  translation: "now page"
-
-- id: now_last_updated
-  translation: "It was last updated on"
+- id: read_case
+  translation: "Read the case study"
+- id: in_english
+  translation: "(English)"
+- id: repo_link
+  translation: "Repository"
+- id: pub_related
+  translation: "Related case study"
 
 - id: footer_nav_heading
   translation: "Navigation"
+- id: footer_contact_heading
+  translation: "Get in touch"
+- id: footer_contact_desc
+  translation: "Technical product management for AI, robotics and engineering software. Email is the fastest way to reach me."
+- id: footer_contact_cta
+  translation: "Email Mahdi"
+- id: newsletter_cta
+  translation: "Newsletter on Substack"
 
+- id: now_intro
+  translation: "This is my <a href=\"https://nownownow.com/about\" rel=\"noopener\">now page</a>: what I'm focused on at this point in my life."
+- id: now_cadence
+  translation: "I update it every quarter."
+- id: now_stale
+  translation: "This update is more than three months old, so some of it may have changed."
+- id: now_last_updated
+  translation: "Last updated:"
+- id: view_all_logs
+  translation: "Earlier updates"
 - id: no_log_entries
   translation: "No log entries yet."
 
 - id: related_posts
-  translation: "Related Posts"
+  translation: "Related"
 
 - id: 404_title
   translation: "Page not found"
-
 - id: 404_desc
   translation: "The page you're looking for doesn't exist or may have moved."
-
 - id: 404_go_home
   translation: "← Go home"
-
 - id: 404_search
   translation: "Search the site"
-
-- id: newsletter_heading
-  translation: "Stay in the Loop"
-
-- id: newsletter_desc
-  translation: "Subscribe on Substack to get new posts delivered to your inbox."
-
-- id: newsletter_cta
-  translation: "Subscribe on Substack →"
-
-- id: cv_download
-  translation: "Download CV"
 
 - id: project_present
   translation: "Present"
@@ -69,12 +98,10 @@
 
 - id: copy_link_title
   translation: "Copy link to this page"
-
 - id: copy_link_copied
   translation: "Copied!"
 
 - id: code_copy
   translation: "copy"
-
 - id: code_copied
   translation: "copied!"

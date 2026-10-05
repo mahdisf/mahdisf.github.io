@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="t d">
+  <title id="t">Illustrative AI-assisted control-design workflow</title>
+  <desc id="d">A nonlinear system model passes through operating-point trimming, linearization to a state-space model, controller candidate generation, closed-loop simulation and verification of stability and frequency response. AI agents support every stage. Illustrative only; not the product interface.</desc>
+  <defs>
+    <pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#e2e8f0" stroke-width="1"/></pattern>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#334155"/></marker>
+  </defs>
+  <style>
+    text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;fill:#0f172a}
+    .b{fill:#fff;stroke:#94a3b8;stroke-width:2}
+    .k{fill:#e8eef7;stroke:#002D62;stroke-width:2.5}
+    .ag{fill:#f3f6fb;stroke:#002D62;stroke-width:1.5;stroke-dasharray:6 5}
+    .l{fill:none;stroke:#334155;stroke-width:2.5}
+    .d{fill:none;stroke:#002D62;stroke-width:1.5;stroke-dasharray:4 4}
+    .h{font-size:19px;font-weight:650}
+    .s{font-size:14px;fill:#475569}
+    .c{font-size:15px;fill:#002D62;font-weight:600}
+  </style>
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect width="960" height="540" fill="url(#g)"/>
+  <text x="40" y="54" class="s">ILLUSTRATIVE WORKFLOW · NOT THE PRODUCT INTERFACE</text>
+
+  <rect x="40" y="96" width="880" height="64" rx="12" class="ag"/>
+  <text x="480" y="134" text-anchor="middle" class="c">AI agents propose, compute and check each step</text>
+
+  <g>
+    <path d="M110 160V238" class="d"/><path d="M260 160V238" class="d"/><path d="M410 160V238" class="d"/>
+    <path d="M560 160V238" class="d"/><path d="M710 160V238" class="d"/><path d="M850 160V238" class="d"/>
+  </g>
+
+  <rect x="40" y="240" width="140" height="110" rx="12" class="b"/>
+  <text x="110" y="286" text-anchor="middle" class="h">Nonlinear</text>
+  <text x="110" y="310" text-anchor="middle" class="h">model</text>
+  <path d="M180 295H188" class="l" marker-end="url(#a)"/>
+
+  <rect x="190" y="240" width="140" height="110" rx="12" class="b"/>
+  <text x="260" y="286" text-anchor="middle" class="h">Operating</text>
+  <text x="260" y="310" text-anchor="middle" class="h">point (trim)</text>
+  <path d="M330 295H338" class="l" marker-end="url(#a)"/>
+
+  <rect x="340" y="240" width="140" height="110" rx="12" class="b"/>
+  <text x="410" y="286" text-anchor="middle" class="h">Linearize</text>
+  <text x="410" y="310" text-anchor="middle" class="s">state-space model</text>
+  <path d="M480 295H488" class="l" marker-end="url(#a)"/>
+
+  <rect x="490" y="240" width="140" height="110" rx="12" class="b"/>
+  <text x="560" y="286" text-anchor="middle" class="h">Controller</text>
+  <text x="560" y="310" text-anchor="middle" class="h">candidates</text>
+  <path d="M630 295H638" class="l" marker-end="url(#a)"/>
+
+  <rect x="640" y="240" width="140" height="110" rx="12" class="b"/>
+  <text x="710" y="286" text-anchor="middle" class="h">Closed-loop</text>
+  <text x="710" y="310" text-anchor="middle" class="h">simulation</text>
+  <path d="M780 295H788" class="l" marker-end="url(#a)"/>
+
+  <rect x="790" y="240" width="130" height="110" rx="12" class="k"/>
+  <text x="855" y="286" text-anchor="middle" class="h">Verify</text>
+  <text x="855" y="310" text-anchor="middle" class="s">stability,</text>
+  <text x="855" y="328" text-anchor="middle" class="s">frequency response</text>
+
+  <path d="M855 350V430H560V352" class="l" marker-end="url(#a)"/>
+  <text x="707" y="458" text-anchor="middle" class="s">fails a check → revise the design</text>
+</svg>

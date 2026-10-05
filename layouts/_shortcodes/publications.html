@@ -1,0 +1,2 @@
+{{- /* Renders data/publications.yaml with status labels in the page's language. */ -}}
+{{ partial "publications.html" (dict "items" hugo.Data.publications "lang" .Page.Language.Lang) }}

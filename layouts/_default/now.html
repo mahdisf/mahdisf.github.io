@@ -1,45 +1,38 @@
 {{- define "main" }}
 
-{{- $logs := where site.RegularPages "Section" "logs" }}
-{{- if not $logs }}
-  {{- range hugo.Sites }}
-    {{- if eq .Language.Lang "en" }}
-      {{- $logs = where .RegularPages "Section" "logs" }}
-    {{- end }}
-  {{- end }}
-{{- end }}
-{{- $sortedLogs := $logs.ByPublishDate.Reverse }}
-
 <article class="post-single">
     <header class="post-header">
         <h1 class="post-title">{{ .Title }}</h1>
     </header>
 
-    {{- if $sortedLogs }}
-    {{- $latest := index $sortedLogs 0 }}
-
-    <p class="now-meta-banner">
-        {{- if eq site.Language.Lang "fa" }}
-        این <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer">صفحه الان ↗</a> من است.
-        {{- else }}
-        This is my <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer">now page ↗</a>.
-        {{- end }}
-        {{ i18n "now_last_updated" | default "It was last updated on" }}
-        <strong>{{ $latest.Date | dateFormat "January 2, 2006" }}</strong>.
-    </p>
+    {{- /* The page's own content is the source of truth. Set `updated: YYYY-MM-DD` in the
+           front matter each quarter; the banner shows the month, and a short note appears
+           in the visitor's browser if the update is more than about three months old. */}}
+    {{- with .Params.updated }}
+    {{- $updated := time . }}
+    <div class="now-meta-banner">
+        <p>{{ i18n "now_intro" | safeHTML }} {{ i18n "now_cadence" }}</p>
+        <p>{{ i18n "now_last_updated" }} <strong><time datetime="{{ $updated.Format "2006-01-02" }}">{{ $updated | time.Format "January 2006" }}</time></strong></p>
+        <p class="now-stale" data-updated="{{ $updated.Format "2006-01-02" }}" hidden>{{ i18n "now_stale" }}</p>
+    </div>
+    <script>
+    (function () {
+        var el = document.querySelector('.now-stale');
+        if (!el) return;
+        var updated = new Date(el.getAttribute('data-updated') + 'T00:00:00Z');
+        var ageDays = (Date.now() - updated.getTime()) / 86400000;
+        if (ageDays > 100) el.hidden = false;
+    })();
+    </script>
+    {{- end }}
 
     <div class="post-content md-content now-content">
-        {{ $latest.Content }}
+        {{ .Content }}
     </div>
 
     <div class="now-footer">
-        <a href="{{ "logs/" | absLangURL }}" class="more-btn">{{ i18n "view_all_logs" | default "View all logs →" }}</a>
+        <a href="{{ "logs/" | absLangURL }}" class="text-link small">{{ i18n "view_all_logs" }}</a>
     </div>
-
-    {{- else }}
-    <p class="now-empty">{{ i18n "no_log_entries" | default "No log entries yet." }}</p>
-    {{- end }}
-
 </article>
 
 {{- end }}

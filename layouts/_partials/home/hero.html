@@ -1,0 +1,61 @@
+{{- $d := .d }}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-text">
+    <div class="hero-id">
+      {{- with site.Params.avatarImage | default site.Params.profileImage }}
+      <img class="hero-portrait" src="{{ . | absURL }}" alt="{{ $d.portraitAlt }}" width="72" height="72" fetchpriority="high">
+      {{- end }}
+      <p class="hero-role eyebrow">{{ i18n "hero_eyebrow" }}</p>
+    </div>
+    <h1 id="hero-title" class="hero-title">
+      <span class="hero-name">{{ $d.name }}</span>
+      <span class="hero-headline">{{ $d.title }}</span>
+    </h1>
+    <p class="hero-lead">{{ $d.lead }}</p>
+    <p class="hero-cred">{{ $d.credibility }}</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="{{ $d.primary.url }}">{{ $d.primary.label }}</a>
+      <a class="btn btn-secondary" href="{{ partial "func/link.html" $d.secondary.url }}">{{ $d.secondary.label }}</a>
+    </div>
+    <div class="hero-social">
+      {{ partial "social_icons.html" (dict "align" "") }}
+      <a class="text-link small hero-cv" href="{{ "cv.pdf" | absURL }}"{{ if ne site.Language.Lang "en" }} hreflang="en"{{ end }}>{{ i18n "cv_link" }}</a>
+    </div>
+  </div>
+
+  {{- /* Original diagram: product work drawn as a closed control loop. */}}
+  <figure class="hero-figure">
+    <svg class="loop-diagram" viewBox="0 0 440 270" role="img" aria-labelledby="loop-title">
+      <title id="loop-title">{{ i18n "loop_caption" }}</title>
+      <defs>
+        <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" class="loop-arrowhead"/>
+        </marker>
+      </defs>
+      <g class="loop-grid" aria-hidden="true">
+        {{- range seq 0 11 }}<line x1="{{ mul . 40 }}" y1="0" x2="{{ mul . 40 }}" y2="270"/>{{ end }}
+        {{- range seq 0 6 }}<line x1="0" y1="{{ mul . 40 }}" x2="440" y2="{{ mul . 40 }}"/>{{ end }}
+      </g>
+      <text x="14" y="86" class="loop-label">{{ i18n "loop_need" }}</text>
+      <path d="M14 110 H78" class="loop-line" marker-end="url(#arrowhead)"/>
+      <circle cx="94" cy="110" r="15" class="loop-sum"/>
+      <text x="94" y="115" class="loop-sym" text-anchor="middle">Σ</text>
+      <text x="68" y="103" class="loop-sign">+</text>
+      <text x="103" y="141" class="loop-sign">−</text>
+      <path d="M109 110 H138" class="loop-line" marker-end="url(#arrowhead)"/>
+      <rect x="140" y="84" width="96" height="52" rx="8" class="loop-block"/>
+      <text x="188" y="115" class="loop-block-text" text-anchor="middle">{{ i18n "loop_decide" }}</text>
+      <path d="M236 110 H262" class="loop-line" marker-end="url(#arrowhead)"/>
+      <rect x="264" y="84" width="96" height="52" rx="8" class="loop-block loop-block-accent"/>
+      <text x="312" y="115" class="loop-block-text" text-anchor="middle">{{ i18n "loop_build" }}</text>
+      <path d="M360 110 H426" class="loop-line" marker-end="url(#arrowhead)"/>
+      <text x="426" y="86" class="loop-label" text-anchor="end">{{ i18n "loop_outcome" }}</text>
+      <path d="M392 110 V214 H290" class="loop-line loop-feedback"/>
+      <rect x="190" y="190" width="100" height="48" rx="8" class="loop-block"/>
+      <text x="240" y="219" class="loop-block-text" text-anchor="middle">{{ i18n "loop_validate" }}</text>
+      <path d="M190 214 H94 V127" class="loop-line loop-feedback" marker-end="url(#arrowhead)"/>
+      <circle cx="392" cy="110" r="3.5" class="loop-node"/>
+    </svg>
+    <figcaption>{{ i18n "loop_caption" }}</figcaption>
+  </figure>
+</section>
