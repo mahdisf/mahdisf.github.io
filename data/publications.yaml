@@ -1,7 +1,8 @@
 # Publications, with verified status. Update `status` only from a public record.
 # Checked 2026-09-24: SSRN page marks item 1 as a preprint that "has not been
 # peer reviewed"; IEEE Xplore lists item 3 with DOI. Item 2 has no public
-# proceedings record yet, so it carries no link and no "published" label.
+# proceedings record yet. Its link points to the author-hosted manuscript,
+# without changing its publication status.
 
 - title: "A Fuzzy Strength Index for Adaptive Assist-as-Needed Control of a Knee Exoskeleton Robot to Enhance Sit-to-Stand Transition"
   authors: "S. M. Sarfarazi, S. Farhadi, H. Sabzali, M. H. Gheshlaghi, I. Kardan, A. Akbarzadeh"
@@ -21,7 +22,8 @@
   year: 2025
   status: { en: "Conference paper; public proceedings record pending", fa: "مقاله کنفرانسی؛ رکورد عمومی مجموعه مقالات هنوز در دسترس نیست" }
   kind: conference
-  url: ""
+  url: "posts/hierarchical-deep-reinforcement-learning-quadruped-navigation/"
+  linkLabel: { en: "Read paper and download PDF", fa: "معرفی مقاله و دانلود PDF" }
   related: "projects/quadruped-navigation-hierarchical-rl/"
 
 - title: "Neural Network Extraction of the Crutch–Leg Synergy to Estimate the Intended Motion for Paraplegic Users of Rehabilitation Exoskeletons"

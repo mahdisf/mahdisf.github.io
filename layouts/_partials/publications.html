@@ -9,7 +9,10 @@
     {{- if or $pub.url $pub.related }}
     <p class="pub-links">
       {{- with $pub.url }}
-      <a class="text-link small" href="{{ . }}" rel="noopener" lang="en" dir="ltr">{{ $pub.linkLabel | default . }}<span class="ext" aria-hidden="true">↗</span></a>
+      {{- $external := strings.Contains . "://" }}
+      {{- $label := $pub.linkLabel | default . }}
+      {{- if reflect.IsMap $label }}{{ $label = index $label $lang | default $label.en }}{{ end }}
+      <a class="text-link small" href="{{ partial "func/link.html" . }}"{{ if $external }} rel="noopener" lang="en" dir="ltr"{{ end }}>{{ $label }}{{ if $external }}<span class="ext" aria-hidden="true">↗</span>{{ end }}</a>
       {{- end }}
       {{- with $pub.related }}
       <a class="text-link small muted" href="{{ partial "func/link.html" . }}" hreflang="en">{{ i18n "pub_related" }}{{ if ne $lang "en" }} <span class="lang-tag">{{ i18n "in_english" }}</span>{{ end }}</a>

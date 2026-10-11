@@ -37,6 +37,8 @@ Separating *where to go* from *how to walk* let a simulated quadruped reach 94.2
 
 This is simulation research, presented as a conference paper at ICRoM 2025. A public proceedings record is not available yet. My M.Sc. thesis extends this work and is still in progress, and this page reports no hardware results.
 
+Read the [paper summary and original figures](/posts/hierarchical-deep-reinforcement-learning-quadruped-navigation/) or [download the complete conference manuscript (PDF)](/papers/hierarchical-deep-reinforcement-learning-quadruped-navigation.pdf).
+
 </div>
 
 ![Diagram: a navigation policy sends a bounded velocity command to a locomotion policy, which also reads terrain height samples and drives the robot's joints.](architecture.svg)
@@ -78,4 +80,4 @@ The thesis extends the architecture toward risk-aware navigation. It combines gl
 
 ## Citation
 
-Y. Ayoubi Rad, S. M. Sarfarazi and M. Shahbazi, "Hierarchical Deep Reinforcement Learning for Quadruped Navigation over Complex Terrains," *13th RSI International Conference on Robotics and Mechatronics (ICRoM 2025)*, Tehran, December 2025. A public link will be added when the proceedings record is available.
+Y. Ayoubi Rad, S. M. Sarfarazi and M. Shahbazi, "Hierarchical Deep Reinforcement Learning for Quadruped Navigation over Complex Terrains," *13th RSI International Conference on Robotics and Mechatronics (ICRoM 2025)*, Tehran, December 2025. [Author-hosted conference manuscript (PDF)](/papers/hierarchical-deep-reinforcement-learning-quadruped-navigation.pdf). A proceedings link will be added when the public record is available.
