@@ -41,3 +41,15 @@ If a quarter is missed, the Now page shows visitors a short note that the update
 ## License
 
 The theme's license is in `themes/PaperMod/LICENSE`.
+
+
+## REAN research page
+
+`static/REAN/` serves the REAN research showcase at `/REAN/`. After Hugo
+builds it, `scripts/sign_mux_embed.py` injects seven-day Mux playback,
+thumbnail and storyboard tokens using the encrypted Actions secrets
+`MUX_SIGNING_KEY_ID` and `MUX_SIGNING_PRIVATE_KEY` (base64 PEM). The key
+never enters published HTML or Git. The Pages workflow runs twice daily
+to refresh tokens as well as on pushes/manual runs. Re-enable scheduled
+Actions if GitHub disables them for repository inactivity. To rotate the
+key, update both repository secrets and run the Pages workflow.

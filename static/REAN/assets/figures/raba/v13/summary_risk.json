@@ -1,0 +1,188 @@
+{
+ "rule": "protocol v12 fixed-sequence family (risk split)",
+ "failure": "does not reach the goal: goal_reached and goal_reached_on_reserve are success; collision_or_fall, timeout, battery_infeasible, no_row and other outcomes are failures",
+ "bootstrap": {
+  "n_resamples": 5000,
+  "rng_seed": 20261026,
+  "cluster": "map (proc_s<seed>)",
+  "statistic": "pooled attempt-weighted mean of failure(a) - failure(b) over the resampled maps' paired attempts",
+  "pairing": "paired by (case, seed); a pair with a missing (no-row) side is excluded and counted",
+  "decision": "superiority passes iff the one-sided 95% upper bound < 0; noninferiority, < the margin; a step is tested only if every previous step passed"
+ },
+ "ice_energy_wh": 50.0,
+ "n_attempts": 411,
+ "n_cases": 137,
+ "n_maps": 83,
+ "by_arm": {
+  "ours_v6": {
+   "attempts": 137,
+   "goal": 137,
+   "goal_on_reserve": 0,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0,
+   "no_row": 0,
+   "failure": 0
+  },
+  "sp": {
+   "attempts": 137,
+   "goal": 100,
+   "goal_on_reserve": 0,
+   "falls": 36,
+   "timeouts": 1,
+   "battery_infeasible": 0,
+   "other": 0,
+   "no_row": 0,
+   "failure": 37
+  },
+  "trg_mu": {
+   "attempts": 137,
+   "goal": 136,
+   "goal_on_reserve": 0,
+   "falls": 1,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0,
+   "no_row": 0,
+   "failure": 1
+  }
+ },
+ "by_arm_stratum": {
+  "ours_v6|compound": {
+   "n": 31,
+   "goal": 31,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "ours_v6|friction": {
+   "n": 67,
+   "goal": 67,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "ours_v6|geometry": {
+   "n": 39,
+   "goal": 39,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "sp|compound": {
+   "n": 31,
+   "goal": 19,
+   "falls": 12,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "sp|friction": {
+   "n": 67,
+   "goal": 57,
+   "falls": 9,
+   "timeouts": 1,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "sp|geometry": {
+   "n": 39,
+   "goal": 24,
+   "falls": 15,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "trg_mu|compound": {
+   "n": 31,
+   "goal": 31,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "trg_mu|friction": {
+   "n": 67,
+   "goal": 67,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "trg_mu|geometry": {
+   "n": 39,
+   "goal": 38,
+   "falls": 1,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  }
+ },
+ "stuck_on_ice": {
+  "sp": {
+   "n": 1,
+   "attempts": [
+    "v4_proc_s7226_x1__sp__s7"
+   ],
+   "strata": {
+    "friction": 1
+   }
+  }
+ },
+ "steps": [
+  {
+   "name": "superiority_sp_all",
+   "contrast": "ours_v6 - sp",
+   "stratum": null,
+   "type": "superiority",
+   "margin": null,
+   "bound": 0.0,
+   "status": "pass",
+   "reason": null,
+   "point": -0.27007299270072993,
+   "upper": -0.20977367227367222,
+   "n_pairs": 137,
+   "n_maps": 83,
+   "n_excluded": 0,
+   "a_only_goal": 37,
+   "b_only_goal": 0
+  },
+  {
+   "name": "noninferiority_trg_mu_all",
+   "contrast": "ours_v6 - trg_mu",
+   "stratum": null,
+   "type": "noninferiority",
+   "margin": 0.03,
+   "bound": 0.03,
+   "status": "pass",
+   "reason": null,
+   "point": -0.0072992700729927005,
+   "upper": 0.0,
+   "n_pairs": 137,
+   "n_maps": 83,
+   "n_excluded": 0,
+   "a_only_goal": 1,
+   "b_only_goal": 0
+  }
+ ],
+ "manifest": "paper/audit/2026-10-19/risk_comparison/v12/v13_manifest_risk.json",
+ "roots": [
+  "logs/risk_comparison_v12/v13/shard_a",
+  "logs/risk_comparison_v12/v13/shard_b"
+ ],
+ "load": {
+  "manifest_attempts": 411,
+  "root_rows": 546,
+  "rows_outside_manifest": 135,
+  "attempts_no_row": 0,
+  "arms": [
+   "ours_v6",
+   "sp",
+   "trg_mu"
+  ]
+ }
+}

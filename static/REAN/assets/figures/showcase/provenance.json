@@ -1,0 +1,307 @@
+{
+  "endpoint_check": "Successful endpoint within recorded goal tolerance plus one final observed step; no endpoint extension.",
+  "examples": [
+    {
+      "attempts": [
+        {
+          "arm": "ours_v6",
+          "id": "v4_proc_s7180_x1__ours_v6__s7",
+          "maps": "logs/risk_comparison_v12/v13/shard_a/sidecars/v4_proc_s7180_x1__ours_v6__s7.maps.npz",
+          "outcome": "goal_reached",
+          "trace": "logs/risk_comparison_v12/v13/shard_a/traces/v4_proc_s7180_x1__ours_v6__s7.npz"
+        },
+        {
+          "arm": "trg_mu",
+          "id": "v4_proc_s7180_x1__trg_mu__s7",
+          "maps": "logs/risk_comparison_v12/v13/shard_a/sidecars/v4_proc_s7180_x1__trg_mu__s7.maps.npz",
+          "outcome": "goal_reached",
+          "trace": "logs/risk_comparison_v12/v13/shard_a/traces/v4_proc_s7180_x1__trg_mu__s7.npz"
+        },
+        {
+          "arm": "sp",
+          "id": "v4_proc_s7180_x1__sp__s7",
+          "maps": "logs/risk_comparison_v12/v13/shard_a/sidecars/v4_proc_s7180_x1__sp__s7.maps.npz",
+          "outcome": "collision_or_fall",
+          "trace": "logs/risk_comparison_v12/v13/shard_a/traces/v4_proc_s7180_x1__sp__s7.npz"
+        }
+      ],
+      "extent": [
+        -1.9949999999999992,
+        34.995000000000005,
+        -1.9949999999999992,
+        34.995000000000005
+      ],
+      "fall_arm": "sp",
+      "filename": "shortest-fall.svg",
+      "goal": [
+        28.919999999999998,
+        19.38
+      ],
+      "patches": [
+        {
+          "centre": [
+            7.616352074515676,
+            10.804148591657512
+          ],
+          "half": [
+            3.7701527526502856,
+            3.716982198894619
+          ],
+          "kind": "ice"
+        },
+        {
+          "centre": [
+            12.272854872174632,
+            17.03748392797636
+          ],
+          "half": [
+            3.666118955971717,
+            3.053788535603216
+          ],
+          "kind": "ice"
+        },
+        {
+          "centre": [
+            25.74361194616042,
+            19.91086243991859
+          ],
+          "half": [
+            3.592211274960873,
+            3.5568138270678786
+          ],
+          "kind": "slick"
+        },
+        {
+          "centre": [
+            10.262215431201925,
+            27.864187814924335
+          ],
+          "half": [
+            3.346138888447744,
+            2.9194154757321717
+          ],
+          "kind": "ice"
+        },
+        {
+          "centre": [
+            29.1267059262662,
+            8.4753971579149
+          ],
+          "half": [
+            2.1494066825386176,
+            3.7126238813707406
+          ],
+          "kind": "ice"
+        },
+        {
+          "centre": [
+            4.058242489646589,
+            29.7535667485095
+          ],
+          "half": [
+            2.042784675535528,
+            2.2355148959651925
+          ],
+          "kind": "ice"
+        },
+        {
+          "centre": [
+            9.6009024993687,
+            13.460799939152487
+          ],
+          "half": [
+            2.7023207469413286,
+            2.1993215006800915
+          ],
+          "kind": "ice"
+        }
+      ],
+      "seed": 7,
+      "start": [
+        26.932828903198242,
+        3.6327877044677734
+      ],
+      "world": "proc_s7180_x1"
+    },
+    {
+      "attempts": [
+        {
+          "arm": "ours_v6",
+          "id": "v4_proc_s7190_x0__ours_v6__s7",
+          "maps": "logs/risk_comparison_v12/v13/shard_b/sidecars/v4_proc_s7190_x0__ours_v6__s7.maps.npz",
+          "outcome": "goal_reached",
+          "trace": "logs/risk_comparison_v12/v13/shard_b/traces/v4_proc_s7190_x0__ours_v6__s7.npz"
+        },
+        {
+          "arm": "trg_mu",
+          "id": "v4_proc_s7190_x0__trg_mu__s7",
+          "maps": "logs/risk_comparison_v12/v13/shard_b/sidecars/v4_proc_s7190_x0__trg_mu__s7.maps.npz",
+          "outcome": "collision_or_fall",
+          "trace": "logs/risk_comparison_v12/v13/shard_b/traces/v4_proc_s7190_x0__trg_mu__s7.npz"
+        },
+        {
+          "arm": "sp",
+          "id": "v4_proc_s7190_x0__sp__s7",
+          "maps": "logs/risk_comparison_v12/v13/shard_b/sidecars/v4_proc_s7190_x0__sp__s7.maps.npz",
+          "outcome": "goal_reached",
+          "trace": "logs/risk_comparison_v12/v13/shard_b/traces/v4_proc_s7190_x0__sp__s7.npz"
+        }
+      ],
+      "extent": [
+        -1.9949999999999992,
+        34.995000000000005,
+        -1.9949999999999992,
+        34.995000000000005
+      ],
+      "fall_arm": "trg_mu",
+      "filename": "graph-fall.svg",
+      "goal": [
+        29.19,
+        27.3
+      ],
+      "patches": [
+        {
+          "centre": [
+            7.468273173648077,
+            15.31023653068533
+          ],
+          "half": [
+            2.187089658188821,
+            3.4851298165897973
+          ],
+          "kind": "ice"
+        },
+        {
+          "centre": [
+            20.69669592097946,
+            14.39022366783216
+          ],
+          "half": [
+            2.5265863056841686,
+            3.3447043473984683
+          ],
+          "kind": "slick"
+        },
+        {
+          "centre": [
+            19.876533041896902,
+            20.71440966800271
+          ],
+          "half": [
+            3.256669335973836,
+            2.547210258799156
+          ],
+          "kind": "slick"
+        },
+        {
+          "centre": [
+            14.637816206898467,
+            8.716717496275596
+          ],
+          "half": [
+            2.953545005428979,
+            2.5395958080043046
+          ],
+          "kind": "slick"
+        },
+        {
+          "centre": [
+            20.11274445908623,
+            20.876542543997125
+          ],
+          "half": [
+            2.7296777496891673,
+            3.6100417445399726
+          ],
+          "kind": "slick"
+        },
+        {
+          "centre": [
+            8.908937135022285,
+            5.330212830047616
+          ],
+          "half": [
+            2.4584760119674165,
+            2.1306144681666934
+          ],
+          "kind": "ice"
+        },
+        {
+          "centre": [
+            13.595736847142016,
+            9.914814639119768
+          ],
+          "half": [
+            3.7980141523047877,
+            2.631549948408185
+          ],
+          "kind": "ice"
+        },
+        {
+          "centre": [
+            13.547650969015397,
+            20.727935140343476
+          ],
+          "half": [
+            2.5724734103269444,
+            2.029691340049179
+          ],
+          "kind": "slick"
+        },
+        {
+          "centre": [
+            23.367654673550355,
+            4.784379178252653
+          ],
+          "half": [
+            3.3695350966005337,
+            3.730807832406831
+          ],
+          "kind": "slick"
+        },
+        {
+          "centre": [
+            22.22068353642942,
+            8.615471745769726
+          ],
+          "half": [
+            2.0066826705894885,
+            3.8876793859652388
+          ],
+          "kind": "ice"
+        }
+      ],
+      "seed": 7,
+      "start": [
+        11.182830810546875,
+        13.9827880859375
+      ],
+      "world": "proc_s7190_x0"
+    }
+  ],
+  "height_coordinates": "LocalMap height[row Y, column X], origin is cell centre; PNG flips Y only.",
+  "patch_source": "material_patches(seed) from sim2sim_leggedgym/risk_mpc/procedural_worlds.py (deterministic, numpy only); seed parsed from proc_s<seed> in the world name.",
+  "selection": "First eligible (world, seed) sorted lexically per comparator fall, with REAN success and all three recorded routes sharing map/start/goal.",
+  "sha256": {
+    "logs/risk_comparison_v12/v13/shard_a/routes.csv": "633ee0caaaa7cc7f0c259fb328370938c071d0eb39a2b9c27d2c907799e16429",
+    "logs/risk_comparison_v12/v13/shard_a/sidecars/v4_proc_s7180_x1__ours_v6__s7.maps.npz": "1c0e8ec9fad4c37e0fc5b0b94a4c31783e3b4a0e950e43c45be1f88972059630",
+    "logs/risk_comparison_v12/v13/shard_a/sidecars/v4_proc_s7180_x1__sp__s7.maps.npz": "49bca79b9298180793691910af34dd2f2dfbbabe2d3da15367afde42eacedea7",
+    "logs/risk_comparison_v12/v13/shard_a/sidecars/v4_proc_s7180_x1__trg_mu__s7.maps.npz": "49bca79b9298180793691910af34dd2f2dfbbabe2d3da15367afde42eacedea7",
+    "logs/risk_comparison_v12/v13/shard_a/traces/v4_proc_s7180_x1__ours_v6__s7.npz": "6ad5eabe535f49c395de58000704bb422fa6297973f29f14f9fc665f9d1b5ff9",
+    "logs/risk_comparison_v12/v13/shard_a/traces/v4_proc_s7180_x1__sp__s7.npz": "c9866bdebe5c0625affbdfc4b764b2fafc5533d7a4c3f0d3df924eb39f613bf8",
+    "logs/risk_comparison_v12/v13/shard_a/traces/v4_proc_s7180_x1__trg_mu__s7.npz": "4d44c4d24a577a6b6523393bc2dfc7ff620e83c9fbca190698cdf6c2f01107a3",
+    "logs/risk_comparison_v12/v13/shard_b/routes.csv": "ef05614aade103634b615eea226272094c632881b36a1c8eb725a073721b96a7",
+    "logs/risk_comparison_v12/v13/shard_b/sidecars/v4_proc_s7190_x0__ours_v6__s7.maps.npz": "2cbf65953d69cc4990217a46a8a6a88e24873f5e17a3318bdcb6dc9a48c9e595",
+    "logs/risk_comparison_v12/v13/shard_b/sidecars/v4_proc_s7190_x0__sp__s7.maps.npz": "b1042d89109cd031c7cd8a9348837d1214070549c2867ecbc67f2c8ab24e6561",
+    "logs/risk_comparison_v12/v13/shard_b/sidecars/v4_proc_s7190_x0__trg_mu__s7.maps.npz": "b1042d89109cd031c7cd8a9348837d1214070549c2867ecbc67f2c8ab24e6561",
+    "logs/risk_comparison_v12/v13/shard_b/traces/v4_proc_s7190_x0__ours_v6__s7.npz": "0ec7f6a50dde0c3beb45076b9e1ec76d0a075519cba1edcbfd6eb762eee63874",
+    "logs/risk_comparison_v12/v13/shard_b/traces/v4_proc_s7190_x0__sp__s7.npz": "0db58dae15578931fcb1390802ecae13cebd69e64ef67b1e25f620e20809b8bc",
+    "logs/risk_comparison_v12/v13/shard_b/traces/v4_proc_s7190_x0__trg_mu__s7.npz": "e961a7573e67feb7db6e47f8208a8462ac56bf02389c3729c33999d48dfcc7fc",
+    "paper/audit/2026-10-19/risk_comparison/v12/v13_manifest_risk.json": "9d0452b85f50af54ed1ecba362d9b6bf61f07fff63783aad5bdad2709564e6f6",
+    "paper/webpage/assets/figures/raba/v13/summary_risk.json": "cdba8db34218ff8ffed0f30b6d04fc36edb21a2109b3a4ab2f95c69883ba8399",
+    "sim2sim_leggedgym/risk_mpc/procedural_worlds.py": "99e76a73e09358b21f61e7306c11bb29bdee28fb858a93e70fc187473c40bbab",
+    "sim2sim_leggedgym/risk_mpc/world_common.py": "09d42080c89bb719b8c733934c4912fb8c95c4f46dfd8671266bb864fc628fe1"
+  },
+  "skips": [],
+  "trajectory_source": "steps[:, :2] (executed world x, y)"
+}

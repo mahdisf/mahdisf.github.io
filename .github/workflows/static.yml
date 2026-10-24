@@ -9,6 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Refresh seven-day Mux playback tokens before they expire.
+  schedule:
+    - cron: "23 */12 * * *"
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -40,6 +44,17 @@ jobs:
           extended: true
       - name: Build site
         run: hugo --minify
+      - name: Set up Python for Mux signing
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Mux signing dependency
+        run: python3 -m pip install --disable-pip-version-check -r scripts/mux-signing-requirements.txt
+      - name: Sign REAN video playback
+        env:
+          MUX_SIGNING_KEY_ID: ${{ secrets.MUX_SIGNING_KEY_ID }}
+          MUX_SIGNING_PRIVATE_KEY: ${{ secrets.MUX_SIGNING_PRIVATE_KEY }}
+        run: python3 scripts/sign_mux_embed.py public/REAN/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

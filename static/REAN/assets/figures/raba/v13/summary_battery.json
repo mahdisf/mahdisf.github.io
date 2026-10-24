@@ -1,0 +1,161 @@
+{
+ "rule": "protocol v12 fixed-sequence family (risk split)",
+ "failure": "does not reach the goal: goal_reached and goal_reached_on_reserve are success; collision_or_fall, timeout, battery_infeasible, no_row and other outcomes are failures",
+ "bootstrap": {
+  "n_resamples": 5000,
+  "rng_seed": 20261026,
+  "cluster": "map (proc_s<seed>)",
+  "statistic": "pooled attempt-weighted mean of failure(a) - failure(b) over the resampled maps' paired attempts",
+  "pairing": "paired by (case, seed); a pair with a missing (no-row) side is excluded and counted",
+  "decision": "superiority passes iff the one-sided 95% upper bound < 0; noninferiority, < the margin; a step is tested only if every previous step passed"
+ },
+ "ice_energy_wh": 50.0,
+ "n_attempts": 135,
+ "n_cases": 45,
+ "n_maps": 40,
+ "by_arm": {
+  "ours_v6": {
+   "attempts": 45,
+   "goal": 45,
+   "goal_on_reserve": 0,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0,
+   "no_row": 0,
+   "failure": 0
+  },
+  "sp": {
+   "attempts": 45,
+   "goal": 12,
+   "goal_on_reserve": 1,
+   "falls": 4,
+   "timeouts": 0,
+   "battery_infeasible": 22,
+   "other": 7,
+   "no_row": 0,
+   "failure": 33
+  },
+  "trg_mu": {
+   "attempts": 45,
+   "goal": 14,
+   "goal_on_reserve": 1,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 31,
+   "other": 0,
+   "no_row": 0,
+   "failure": 31
+  }
+ },
+ "by_arm_stratum": {
+  "ours_v6|battery_compound": {
+   "n": 8,
+   "goal": 8,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "ours_v6|battery_friction": {
+   "n": 18,
+   "goal": 18,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "ours_v6|battery_geometry": {
+   "n": 19,
+   "goal": 19,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 0,
+   "other": 0
+  },
+  "sp|battery_compound": {
+   "n": 8,
+   "goal": 1,
+   "falls": 2,
+   "timeouts": 0,
+   "battery_infeasible": 4,
+   "other": 1
+  },
+  "sp|battery_friction": {
+   "n": 18,
+   "goal": 7,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 11,
+   "other": 0
+  },
+  "sp|battery_geometry": {
+   "n": 19,
+   "goal": 4,
+   "falls": 2,
+   "timeouts": 0,
+   "battery_infeasible": 7,
+   "other": 6
+  },
+  "trg_mu|battery_compound": {
+   "n": 8,
+   "goal": 2,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 6,
+   "other": 0
+  },
+  "trg_mu|battery_friction": {
+   "n": 18,
+   "goal": 6,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 12,
+   "other": 0
+  },
+  "trg_mu|battery_geometry": {
+   "n": 19,
+   "goal": 6,
+   "falls": 0,
+   "timeouts": 0,
+   "battery_infeasible": 13,
+   "other": 0
+  }
+ },
+ "stuck_on_ice": {},
+ "steps": [
+  {
+   "name": "superiority_trg_mu_battery",
+   "contrast": "ours_v6 - trg_mu",
+   "stratum": null,
+   "type": "superiority",
+   "margin": null,
+   "bound": 0.0,
+   "status": "pass",
+   "reason": null,
+   "point": -0.6888888888888889,
+   "upper": -0.5625,
+   "n_pairs": 45,
+   "n_maps": 40,
+   "n_excluded": 0,
+   "a_only_goal": 31,
+   "b_only_goal": 0
+  }
+ ],
+ "manifest": "paper/audit/2026-10-19/risk_comparison/v12/v13_manifest_battery.json",
+ "roots": [
+  "logs/risk_comparison_v12/v13/shard_a",
+  "logs/risk_comparison_v12/v13/shard_b"
+ ],
+ "load": {
+  "manifest_attempts": 135,
+  "root_rows": 546,
+  "rows_outside_manifest": 411,
+  "attempts_no_row": 0,
+  "arms": [
+   "ours_v6",
+   "sp",
+   "trg_mu"
+  ]
+ }
+}
